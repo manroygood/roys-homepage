@@ -22,12 +22,12 @@ interests:
 education:
 - degree: BS Mathematics
   institution: Ramjas College, University of Delhi
-  end: '2015-06-01'
+  year: '2015'
 - degree: M.Sc. Applied Mathematics
   institution: National Institute of Technology, Warangal, Telangana, India
-  end: '2017-06-01'
+  year: '2017'
 - degree: Ph.D. Mathematical Sciences
   institution: New Jersey Institute of Technology
-  end: '2025-06-01'
+  year: '2025'
 user_groups:
 - Ph.D. Alumni

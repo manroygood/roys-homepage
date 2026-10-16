@@ -30,12 +30,12 @@ interests:
 education:
 - degree: Ph.D. Applied Mathematics
   institution: New Jersey Institute of Technology
-  end: '2020-06-01'
+  year: '2020'
 - degree: MS, Mathematical Sciences
   institution: New York University
-  end: '2011-06-01'
+  year: '2011'
 - degree: BS, Mathematics
   institution: University of San Francisco
-  end: '2006-06-01'
+  year: '2006'
 user_groups:
 - Ph.D. Alumni

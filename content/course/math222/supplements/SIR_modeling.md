@@ -65,11 +65,11 @@ Several assumptions go into this model:
 
 Here we show the results of two simulations. In both situations, we initialize the system by introducing a small number of infected individuals $I_0$​​. In the first case, the number of infected individuals quickly decreases to zero and an epidemic is avoided. In the end about 10\% of the population has had the disease and 90% remain susceptible.
 
-{{< figure library="true" src="math222f21/no_epidemic.jpg" title="Course of epidemic with $\beta=0.005$​, $\gamma=0.5$​. Susceptible (red), Infected (green), Recovered (blue). No epidemic" lightbox="true" >}}
+{{< figure library="true" src="/media/math222f21/no_epidemic.jpg" title="Course of epidemic with $\beta=0.005$​, $\gamma=0.5$​. Susceptible (red), Infected (green), Recovered (blue). No epidemic" lightbox="true" >}}
 
 In the second case, the number of infected individuals *increases*, which we refer to as an epidemic. In the end about 95\% of the population has had the disease and 5% remain susceptible. At the epidemic's peak, 40\% of the population was infected.
 
-{{< figure library="true" src="math222f21/epidemic.jpg" title="Course of epidemic with $\beta=0.02$, $\gamma=0.5$. Susceptible (red), Infected (green), Recovered (blue). No epidemic" lightbox="true" >}}
+{{< figure library="true" src="/media/math222f21/epidemic.jpg" title="Course of epidemic with $\beta=0.02$, $\gamma=0.5$. Susceptible (red), Infected (green), Recovered (blue). No epidemic" lightbox="true" >}}
 
 In your assignment, you will explore how we can relate these two types of solution to the problem's parameters and initial conditions.
 

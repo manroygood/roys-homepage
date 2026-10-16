@@ -4,7 +4,7 @@ authors:
   - atul-anurag
   - admin
 date: 2026-06-22T21:36:37-04:00
-doi: "https://doi.org/10.1016/j.cnsns.2026.110428"
+doi: "10.1016/j.cnsns.2026.110428"
 publishDate: 2026-06-22T21:36:37-04:00
 publication_types:
   - preprint

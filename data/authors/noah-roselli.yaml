@@ -21,12 +21,12 @@ interests:
 education:
 - degree: BS in Physics
   institution: New Jersey Institute of Technology
-  end: '2022-06-01'
+  year: '2022'
 - degree: B.S. in Mathematics
   institution: New Jersey Institute of Technology
-  end: '2022-06-01'
+  year: '2022'
 - degree: Ph.D. in Engineering Science and Applied Mathematics
   institution: Northwestern University
-  end: 2027 (Expected)-06-01
+  year: 2027 (Expected)
 user_groups:
 - BS Alumni

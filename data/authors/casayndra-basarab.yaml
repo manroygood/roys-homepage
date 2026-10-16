@@ -25,9 +25,9 @@ interests:
 education:
 - degree: Ph.D. in Mathematical Sciences
   institution: New Jersey Institute of Technology
-  end: '2016-06-01'
+  year: '2016'
 - degree: B.S. in Mathematics
   institution: New Jersey Institute of Technology
-  end: '2011-06-01'
+  year: '2011'
 user_groups:
 - Ph.D. Alumni

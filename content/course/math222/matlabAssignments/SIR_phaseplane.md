@@ -25,19 +25,19 @@ Note we have assumed a population $N=10000$. As we decrease $\beta$, the critica
 
 The nullcline is right in the middle of the phase plane. The total infected population rises a lot before falling.
 
-{{< figure library="true" src="math222/SIR_phaseportrait1.png" title="Phase portrait for $\beta=0.0002$ " lightbox="true" >}}
+{{< figure library="true" src="/media/math222/SIR_phaseportrait1.png" title="Phase portrait for $\beta=0.0002$ " lightbox="true" >}}
 
 ### Case 2, $\beta=0.000125$
 
 The nullcline has moved further to the right, so that the infection rate does not reach such a high level and in fact begins decreasing while there a lot more susceptible people, so that fewer people get sick.
 
-{{< figure library="true" src="math222/SIR_phaseportrait2.png" title="Phase portrait for $\beta=0.000125$ " lightbox="true" >}}
+{{< figure library="true" src="/media/math222/SIR_phaseportrait2.png" title="Phase portrait for $\beta=0.000125$ " lightbox="true" >}}
 
 ### Case 3, $\beta=0.00009$
 
 Now the nullcline lies to the right of our total population, i.e. $S_{\rm critical}>10000$, so that no matter what the initial number of infected people, $\frac{dI}{dt}<0$ from the beginning and the outbreak is averted.
 
-{{< figure library="true" src="math222/SIR_phaseportrait3.png" title="Phase portrait for $\beta=0.00009$ " lightbox="true" >}}
+{{< figure library="true" src="/media/math222/SIR_phaseportrait3.png" title="Phase portrait for $\beta=0.00009$ " lightbox="true" >}}
 
 ### What about vaccination?
 

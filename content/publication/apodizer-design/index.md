@@ -4,7 +4,7 @@ authors:
   - jimmie-adriazola
   - admin
 date: 2023-06-06T09:44:54-04:00
-doi: https://doi.org/10.1137/22M1507759
+doi: 10.1137/22M1507759
 publishDate: null
 publication_types:
   - article-journal

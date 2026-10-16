@@ -8,7 +8,7 @@
   <div class="min-w-0 flex-1">
     <a href="{{ $item.RelPermalink }}" class="block text-xl font-bold leading-snug text-gray-900 dark:text-gray-100 hover:text-primary-700 dark:hover:text-primary-300 [font-family:var(--hb-font-heading)]">{{ $item.Title }}</a>
     {{ with $summary }}
-      <div class="mt-1 text-[0.95rem] text-gray-700 dark:text-gray-300 line-clamp-5">{{ . | plainify | htmlUnescape | replaceRE `^\s*(Note|Warning)\s+` "" | truncate 300 }}</div>
+      <div class="mt-1 text-[0.95rem] text-gray-700 dark:text-gray-300">{{ . | plainify | htmlUnescape | replaceRE `^\s*(Note|Warning)\s+` "" }}</div>
     {{ end }}
     {{ if $item.Params.authors }}
       <div class="mt-2 text-xs text-gray-500 dark:text-gray-400">{{ partial "page_metadata_authors" $item }}</div>

@@ -24,13 +24,13 @@ My results are in a {{% staticref "math222/SIRsolution.html" %}} MATLAB-generate
 
 Here you were asked to use phase-plane drawing software to examine solutions graphically. It was pointed out that $\frac{dI}{dt}=0$ when $S^* = \frac{\gamma}{\beta}$. From the following three images, we see that $S_0> S^*$ when $\beta>10^{-4}$, which is when we see epidemics.
 
-{{< figure library="true" src="math222/beta_0p0002.png" title="Phase plane with $\beta=2\times10^{-4}$, $S^*=5000$" lightbox="true" >}}
+{{< figure library="true" src="/media/math222/beta_0p0002.png" title="Phase plane with $\beta=2\times10^{-4}$, $S^*=5000$" lightbox="true" >}}
 
-{{< figure library="true" src="math222/beta_0p000125.png" title="Phase plane with $\beta=1.25\times10^{-4}$, $S^*=8000$" lightbox="true" >}}
+{{< figure library="true" src="/media/math222/beta_0p000125.png" title="Phase plane with $\beta=1.25\times10^{-4}$, $S^*=8000$" lightbox="true" >}}
 
 In the third case, $\beta=9\times10^{-5}$ $S_0=11111>N=10000$, so the infection number is decreasing at $t=0$.
 
-{{< figure library="true" src="math222/beta_0p00009.png" title="Phase plane with $\beta=9\times10^{-5}$" lightbox="true" >}}
+{{< figure library="true" src="/media/math222/beta_0p00009.png" title="Phase plane with $\beta=9\times10^{-5}$" lightbox="true" >}}
 
 
 **There is also a question asked "Can this model support a sustained epidemic."** The answer is that it cannot. In a sustained epidemic, the infection rate $I(t)$ would have to reach a nonzero steady state but the phase plane shows that $\lim_{t\to\infty}I(t)=0$ for all solutions, so it can't sustain an epidemic. To support a sustained epidemic, a model must refresh its supply of susceptible individuals. Fortunately for the germs, we do that anyway by having babies! A more complete models will include births.

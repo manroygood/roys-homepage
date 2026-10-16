@@ -27,9 +27,9 @@ interests:
 education:
 - degree: Ph.D. in Mathematical Sciences
   institution: New Jersey Institute of Technology
-  end: '2011-06-01'
+  year: '2011'
 - degree: M.S. in Mathematics
   institution: AGH University of Science and Technology, Kraków, Poland
-  end: '2005-06-01'
+  year: '2005'
 user_groups:
 - Ph.D. Alumni

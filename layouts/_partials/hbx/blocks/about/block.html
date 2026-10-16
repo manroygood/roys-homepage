@@ -59,7 +59,7 @@
               <li class="flex gap-3">
                 <span class="mt-0.5 shrink-0 text-gray-700 dark:text-gray-300">{{ partial "functions/get_icon" (dict "name" "hero/academic-cap" "attributes" "class=\"w-6 h-6\"") }}</span>
                 <div>
-                  <div class="text-gray-800 dark:text-gray-200">{{ .degree }}{{ with .end }}, {{ (time .).Year }}{{ end }}</div>
+                  <div class="text-gray-800 dark:text-gray-200">{{ .degree }}{{ with .year }}, {{ . }}{{ else }}{{ with .end }}, {{ (time .).Year }}{{ end }}{{ end }}</div>
                   <div class="text-sm text-gray-500 dark:text-gray-400">{{ .institution }}</div>
                 </div>
               </li>

@@ -31,15 +31,15 @@ interests:
 education:
 - degree: B.S. Applied Mathematics
   institution: New Jersey Institute of Technology
-  end: '2016-06-01'
+  year: '2016'
 - degree: Ph.D. Applied Mathematics
   institution: New Jersey Institute of Technology
-  end: '2021-06-01'
+  year: '2021'
 - degree: Postdoc, Mathematics Department
   institution: UC Santa Barbara
-  end: 2022-2023-06-01
+  year: 2022-2023
 - degree: NSF MPS-Ascend Postdoctoral Fellow
   institution: Southern Methodist University
-  end: 2023-2024-06-01
+  year: 2023-2024
 user_groups:
 - Ph.D. Alumni

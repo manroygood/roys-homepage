@@ -1,0 +1,17 @@
+{{/* Author profile page, like the old Wowchemy one: the about block, then a "Latest" list. */}}
+{{ define "main" }}
+{{ $slug := .Data.Term | urlize }}
+<section class="py-12">
+  {{ partial "hbx/blocks/about/block.html" (dict "wcPage" . "wcBlock" (dict "content" (dict "username" $slug))) }}
+</section>
+{{ with .Pages }}
+<section class="mx-auto max-w-6xl px-6 pb-16">
+  <h3 class="text-2xl mb-3 text-gray-900 dark:text-white">{{ i18n "latest" | default "Latest" }}</h3>
+  <ul class="list-disc pl-6 space-y-1">
+    {{ range .ByDate.Reverse }}
+      <li><a class="text-primary-700 dark:text-primary-300 hover:underline" href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+    {{ end }}
+  </ul>
+</section>
+{{ end }}
+{{ end }}

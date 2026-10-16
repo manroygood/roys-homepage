@@ -1,0 +1,7 @@
+{{- /* Emit LaTeX for client-side KaTeX with HTML escaped, so math such as $0<x<1$
+       is not parsed as an HTML tag (which swallowed the rest of the paragraph). */ -}}
+{{- if eq .Type "block" -}}
+\[{{ .Inner | htmlEscape | safeHTML }}\]
+{{- else -}}
+\({{ .Inner | htmlEscape | safeHTML }}\)
+{{- end -}}

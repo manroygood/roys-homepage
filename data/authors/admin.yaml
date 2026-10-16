@@ -41,9 +41,9 @@ interests:
 education:
 - degree: PhD, Mathematical Sciences
   institution: New York University
-  end: '1999-06-01'
+  year: '1999'
 - degree: BS, Mathematics
   institution: University of Michigan
-  end: '1994-06-01'
+  year: '1994'
 tagline: My research interests include dynamical systems and nonlinear waves, vortex
   dynamics, quantum graphs, and network inference
