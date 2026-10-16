@@ -3,7 +3,7 @@ title: Other writing
 date: 2020-06-18
 type: landing
 sections:
-  - block: collection
+  - block: collection-2col
     content:
       title: Other Writing
       filters:
@@ -13,5 +13,5 @@ sections:
       count: 0
       order: desc
     design:
-      view: card
+      view: card-legacy
 ---

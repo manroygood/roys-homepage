@@ -3,7 +3,7 @@ title: Publications
 date: 2020-06-18
 type: landing
 sections:
-  - block: collection
+  - block: collection-2col
     content:
       title: Publications
       filters:
@@ -13,5 +13,5 @@ sections:
       count: 0
       order: desc
     design:
-      view: date-title-summary
+      view: compact
 ---

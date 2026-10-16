@@ -1,0 +1,49 @@
+{{/* Course grid, ported from the old Wowchemy portfolio widget (masonry view with filter buttons).
+     Lists the course folders under content/<section>/; buttons filter on each course's tags. */}}
+{{ $page := .wcPage }}
+{{ $block := .wcBlock }}
+{{ $c := $block.content | default dict }}
+{{ $section := site.GetPage (printf "/%s" ($c.section | default "course")) }}
+{{ $id := .wcIdentifier | default "courses" }}
+<div class="mx-auto max-w-6xl px-4" id="{{ $id }}-grid">
+  {{ with $c.title }}<h1 class="text-center text-5xl font-normal text-gray-900 dark:text-white mb-6">{{ . }}</h1>{{ end }}
+  {{ with $c.buttons }}
+    <div class="flex justify-center mb-8">
+      <div class="inline-flex rounded overflow-hidden">
+        {{ range $i, $b := . }}
+          <button type="button" data-filter="{{ $b.tag }}" class="js-course-filter px-3 py-1 text-white bg-primary-700 hover:bg-primary-800 data-[active]:bg-primary-900">{{ $b.name }}</button>
+        {{ end }}
+      </div>
+    </div>
+  {{ end }}
+  <div class="columns-1 md:columns-2 lg:columns-3 gap-4">
+    {{ range $section.Sections.ByWeight }}{{ $course := . }}
+      {{ $image := partial "functions/get_featured_image" . }}
+      <div class="js-course break-inside-avoid mb-4 border border-gray-200 bg-white shadow-sm dark:border-gray-700 dark:bg-gray-900" data-tags="{{ delimit (.Params.tags | default slice) " " }}">
+        {{ with $image }}
+          {{ $img := . }}
+          {{ if reflect.IsImageResourceProcessable . }}{{ $img = .Resize "600x webp" }}{{ end }}
+          <a href="{{ $course.RelPermalink }}"><img src="{{ $img.RelPermalink }}" alt="" class="w-full h-auto" loading="lazy" /></a>
+        {{ end }}
+        <div class="p-4">
+          <a href="{{ .RelPermalink }}" class="block text-lg font-bold leading-snug text-primary-700 dark:text-primary-300 hover:underline [font-family:var(--hb-font-heading)]">{{ .Title }}</a>
+          {{ with .Params.summary }}<div class="mt-2 text-sm text-gray-600 dark:text-gray-400">{{ . | markdownify }}</div>{{ end }}
+        </div>
+      </div>
+    {{ end }}
+  </div>
+</div>
+<script>
+(() => {
+  const root = document.getElementById({{ printf "%s-grid" $id }});
+  const buttons = root.querySelectorAll('.js-course-filter');
+  const show = (tag) => {
+    buttons.forEach(b => b.toggleAttribute('data-active', b.dataset.filter === tag));
+    root.querySelectorAll('.js-course').forEach(el => {
+      el.style.display = (tag === '*' || el.dataset.tags.split(' ').includes(tag)) ? '' : 'none';
+    });
+  };
+  buttons.forEach(b => b.addEventListener('click', () => show(b.dataset.filter)));
+  if (buttons.length) show({{ index ($c.buttons | default (slice (dict "tag" "*"))) (int ($c.default_button_index | default 0)) "tag" }});
+})();
+</script>

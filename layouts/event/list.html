@@ -1,0 +1,17 @@
+{{/* Talks list, like the old site: one card per talk, grouped by year in a left column. */}}
+{{ define "main" }}
+<div class="mx-auto max-w-5xl px-4 py-10">
+  <h1 class="text-5xl font-normal text-gray-900 dark:text-white mb-8">{{ .Title }}</h1>
+  {{ .Content }}
+  {{ range .Pages.GroupByDate "2006" }}
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-x-6">
+      <div class="md:col-span-2 pt-4 text-2xl font-bold text-gray-900 dark:text-white [font-family:var(--hb-font-heading)]">{{ .Key }}</div>
+      <div class="md:col-span-10">
+        {{ range .Pages.ByDate.Reverse }}
+          {{ partial "views/card-legacy" (dict "page" $ "item" . "index" 0 "config" dict) }}
+        {{ end }}
+      </div>
+    </div>
+  {{ end }}
+</div>
+{{ end }}

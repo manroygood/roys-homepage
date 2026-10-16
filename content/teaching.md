@@ -3,15 +3,12 @@ title: Teaching
 date: 2021-02-27
 type: landing
 sections:
-  - block: portfolio
+  # Custom block in layouts/_partials/hbx/blocks/course-grid/
+  - block: course-grid
+    id: courses
     content:
       title: Teaching
-      count: 0
-      filters:
-        folders:
-          - course
-        kinds:
-          - section
+      section: course
       buttons:
         - name: All Courses
           tag: '*'
@@ -20,7 +17,4 @@ sections:
         - name: Past Courses
           tag: previous
       default_button_index: 0
-    design:
-      columns: 2
-      fallback_icon: academic-cap
 ---

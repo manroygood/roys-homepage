@@ -3,7 +3,7 @@ title: Students
 date: 2020-06-18
 type: landing
 sections:
-  - block: team-showcase
+  - block: people # custom block in layouts/_partials/hbx/blocks/people/
     content:
       title: Students
       user_groups:
