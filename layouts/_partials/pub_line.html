@@ -1,13 +1,20 @@
 {{/*
   One-line citation shown between a publication's title and its summary:
-  full author list, full journal name (from front matter `publication.name`), and year.
+  full author list (co-authors linked to their pages), full journal name (from front matter `publication.name`), and year.
   Input: the publication page.
 */}}
 {{ $p := . }}
 {{ $names := slice }}
 {{ range $p.Params.authors }}
   {{ $prof := partial "functions/get_author_profile" (dict "slug" . "title" .) }}
-  {{ $names = $names | append $prof.title }}
+  {{ $name := $prof.title | htmlEscape }}
+  {{/* Link co-authors to their author pages; the site owner is not linked. */}}
+  {{ if not $prof.is_owner }}
+    {{ with site.GetPage (printf "/authors/%s" (urlize .)) }}
+      {{ $name = printf `<a href="%s" class="text-primary-700 hover:underline dark:text-primary-300">%s</a>` .RelPermalink $name }}
+    {{ end }}
+  {{ end }}
+  {{ $names = $names | append $name }}
 {{ end }}
 {{ $pub := partial "functions/resolve_publication.html" $p }}
 {{ $journal := $pub.name | default "" }}
@@ -17,7 +24,7 @@
 <div class="hb-pub-line text-[0.95rem] font-medium text-gray-800 dark:text-gray-200">
   {{- range $i, $name := $names -}}
     {{- if gt $i 0 }}{{ if eq (add $i 1) $n }}{{ if gt $n 2 }},{{ end }} and {{ else }}, {{ end }}{{ end -}}
-    {{- $name -}}
+    {{- $name | safeHTML -}}
   {{- end -}}
   {{- if $n }}. {{ end -}}
   {{- with $journal }}<em>{{ . | $p.RenderString }}</em>, {{ end -}}
