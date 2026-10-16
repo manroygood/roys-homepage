@@ -17,7 +17,7 @@
       {{ if reflect.IsImageResourceProcessable . }}{{ $img = .Fill "540x540 Center webp" }}{{ end }}
       <img class="w-[270px] h-[270px] rounded-full object-cover mb-4" src="{{ $img.RelPermalink }}" width="270" height="270" alt="{{ $profile.title }}" />
     {{ end }}
-    <h2 class="font-heading text-4xl text-gray-900 dark:text-white mb-2">{{ $profile.title }}</h2>
+    <h2 class="text-4xl font-normal text-gray-900 dark:text-white mb-2">{{ $profile.title }}</h2>
     {{ with $profile.role }}<div class="text-lg text-gray-500 dark:text-gray-400 leading-snug [&_a]:text-primary-700 dark:[&_a]:text-primary-300">{{ . | markdownify }}</div>{{ end }}
     {{ range $profile.affiliations }}
       <div class="mt-3 text-lg leading-snug">
@@ -45,7 +45,7 @@
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-8">
       {{ with $data.interests }}
         <div>
-          <h3 class="font-heading text-2xl mb-3 text-gray-900 dark:text-white">{{ i18n "interests" | default "Interests" }}</h3>
+          <h3 class="font-medium text-2xl mb-3 text-gray-900 dark:text-white">{{ i18n "interests" | default "Interests" }}</h3>
           <ul class="list-disc pl-6 space-y-1 text-gray-700 dark:text-gray-300">
             {{ range . }}<li>{{ . | markdownify }}</li>{{ end }}
           </ul>
@@ -53,7 +53,7 @@
       {{ end }}
       {{ with $data.education }}
         <div>
-          <h3 class="font-heading text-2xl mb-3 text-gray-900 dark:text-white">{{ i18n "education" | default "Education" }}</h3>
+          <h3 class="font-medium text-2xl mb-3 text-gray-900 dark:text-white">{{ i18n "education" | default "Education" }}</h3>
           <ul class="space-y-3">
             {{ range . }}
               <li class="flex gap-3">

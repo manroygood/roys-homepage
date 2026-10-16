@@ -1,0 +1,25 @@
+{{/*
+  Load the site fonts from Google Fonts ourselves. The template's font-pack loader joins
+  static weights with commas (e.g. Roboto:wght@400,700), which Google rejects with a 400,
+  so no web font loaded at all. Configure in params.yaml under `fonts`
+  (heading, body, and optionally weights such as "400;500;700").
+*/}}
+{{ with site.Params.fonts }}
+  {{ $fams := slice }}
+  {{ range slice .heading .body }}{{ with . }}{{ $fams = $fams | append . }}{{ end }}{{ end }}
+  {{ $q := slice }}
+  {{/* Weights must exist for every family or Google returns an error, e.g. Lato has no 500/600. */}}
+  {{ $w := .weights | default "400;700" }}
+  {{ range $fams | uniq }}{{ $q = $q | append (printf "family=%s:wght@%s" (replace . " " "+") $w) }}{{ end }}
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?{{ delimit $q "&" | safeURL }}&display=swap" />
+  <style>
+    :root {
+      --hb-font-heading: '{{ .heading }}', ui-sans-serif, system-ui, sans-serif;
+      --hb-font-body: '{{ .body }}', ui-sans-serif, system-ui, sans-serif;
+      --hb-font-nav: '{{ .body }}', ui-sans-serif, system-ui, sans-serif;
+    }
+    body { font-family: var(--hb-font-body); }
+  </style>
+{{ end }}

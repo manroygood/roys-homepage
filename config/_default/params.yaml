@@ -61,7 +61,7 @@ hugoblox:
   # ────────────────────────────────────────────────────────────────────────────
   typography:
     # Theme pack: name from data/fonts/
-    pack: "minimal" # data/fonts/minimal.yaml
+    pack: "system" # actual fonts are set under `fonts` below
 
   # ────────────────────────────────────────────────────────────────────────────
   # LAYOUT
@@ -290,3 +290,8 @@ hugoblox:
     # Affiliate referral code for rewards program
     # Join affiliate program: https://hugoblox.com/affiliates
     affiliate_code: ""
+
+# Site fonts (Google Fonts), loaded by layouts/_partials/hooks/head-end/fonts.html
+fonts:
+  heading: "Montserrat"
+  body: "Roboto"
