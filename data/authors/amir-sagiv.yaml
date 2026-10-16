@@ -5,12 +5,10 @@ name:
   display: Amir Sagiv
   given: Amir
   family: Sagiv
-role: Postdoc
+role: Assistant Professor, [Department of Mathematical Sciences, NJIT](https://math.njit.edu/)
 affiliations:
-- name: Columbia University
-  url: ''
+- name: New Jersey Institute of Technology
+  url: https://www.njit.edu
 links:
-- icon: hero/envelope
-  url: mailto:as6011@columbia.edu
 - icon: hero/globe-americas
-  url: https://apam.columbia.edu/amir-sagiv
+  url: https://asagivmath.github.io

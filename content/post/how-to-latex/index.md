@@ -72,8 +72,8 @@ I have used four methods to declare macros:
 * `\DeclarePairedDelimiter` (from **mathtools**). Here is how my approach to absolute values has evolved:
   1. Basic: `|x|`. The bars don't grow to fit tall contents such as fractions, and the code says nothing about what the bars *mean*.
   2. Better: a macro built with **mathtools**: `\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}`. Now `\abs{x}` says what you mean, and `\abs*{\frac{p(x)}{q(x)}}` (with the star) scales the bars to fit.
-  3. Also good: the **physics2** package's `\ab` command sizes any pair of delimiters automatically: `\ab|\frac{p(x)}{q(x)}|` gives $\left\lvert \frac{p(x)}{q(x)} \right\rvert$, and `\ab*|x|` turns the sizing off. To keep the meaning in your source, wrap it in a macro: `\newcommand{\abs}[1]{\ab|#1|}`.
-* The same tools handle other paired delimiters. For an inner product, either define `\DeclarePairedDelimiterX{\innerp}[2]{\langle}{\rangle}{#1,#2}` so that `\innerp*{\frac{p}{q}}{f}` gives $\left\langle \frac{p}{q},f \right\rangle$, or write `\ab<\frac{p}{q}, f>` with **physics2**. Bonus tip: use `\langle` and `\rangle`, not `<` and `>`, for inner products.
+  3. Also good: the **physics2** package's `\ab` command (from its **ab** module; see below) sizes any pair of delimiters automatically: `\ab|\frac{p(x)}{q(x)}|` gives $\left\lvert \frac{p(x)}{q(x)} \right\rvert$, and `\ab*|x|` turns the sizing off. To keep the meaning in your source, wrap it in a macro: `\newcommand{\abs}[1]{\ab|#1|}`.
+* The same tools handle other paired delimiters. For an inner product, either define `\DeclarePairedDelimiterX{\innerp}[2]{\langle}{\rangle}{#1,#2}` so that `\innerp*{\frac{p}{q}}{f}` gives $\left\langle \frac{p}{q},f \right\rangle$, or write `\ab<\frac{p}{q}, f>` with the **ab** module of **physics2**. Bonus tip: use `\langle` and `\rangle`, not `<` and `>`, for inner products.
 
 ## Using packages
 
@@ -103,16 +103,18 @@ Here are the packages that are called in my template. In some cases, the order t
 
 * **mathtools** builds on top of the AMS packages. It provides the `\DeclarePairedDelimiter` construct I used to build the absolute value and inner product macros. Another useful command: regular $\LaTeX$ renders `:=` with poor vertical alignment. **mathtools** provides `\coloneqq`, which fixes this.
 
-* **physics2** is a modern, maintained replacement for the old **physics** package. It is split into modules, which you load after the package:
+* **physics2** is a modern, maintained replacement for the old **physics** package. Loading the package by itself gives you almost nothing: each feature lives in a *module* that you must enable with `\usephysicsmodule`, after `\usepackage{physics2}`. List only the modules you need, separated by commas:
 
   ```latex
   \usepackage{physics2}
-  \usephysicsmodule{ab,ab.braket,diagmat}
+  \usephysicsmodule{ab,ab.braket,diagmat,xmat}
   ```
 
-  * The **ab** module provides `\ab`, which sizes a pair of delimiters automatically: `\ab(\frac{x}{2})`, `\ab[\dots]`, `\ab\{\dots\}`, `\ab|x|`, `\ab\|x\|`, and `\ab<f, g>`. Use it for function arguments too, as in `\sin\ab(\frac{x}{2})`.
-  * The **ab.braket** module provides Dirac notation: `\bra<\phi|`, `\ket|\psi>`, and `\braket<\phi|A|\psi>`.
-  * The **diagmat** and **xmat** modules make diagonal matrices and matrices with patterned entries easy to typeset.
+  * **ab** module: the `\ab` command, which sizes a pair of delimiters automatically: `\ab(\frac{x}{2})`, `\ab[\dots]`, `\ab\{\dots\}`, `\ab|x|`, `\ab\|x\|`, and `\ab<f, g>`. Use it for function arguments too, as in `\sin\ab(\frac{x}{2})`. A star, `\ab*|x|`, turns the automatic sizing off.
+  * **ab.braket** module: Dirac notation with `\bra<\phi|`, `\ket|\psi>`, `\braket<\phi|A|\psi>`, and `\ketbra`.
+  * **diagmat** module: diagonal matrices, e.g. `\pdiagmat{1,2,3}` for a diagonal matrix in parentheses.
+  * **xmat** module: matrices with patterned entries, e.g. `\bxmat{a}{3}{3}` for a $3\times3$ matrix with entries $a_{ij}$ in brackets.
+  * **doubleprod** module: the double-dot and double-cross products used with tensors.
 
 * **derivative** handles derivatives and differentials, with many options for order and style.
 
@@ -182,7 +184,7 @@ If you prefer to edit locally, then set up Dropbox integration under Account $\r
 
 * Don't start a sentence with a symbol. Say "The norm $\lVert x\rVert$ is finite," not "$\lVert x\rVert$ is finite."
 
-* Make minimal use of hand-formatted spacing. Try to avoid using `\ ` (backslash-space), `\,`, etc. 
+* Let $\TeX$ do the spacing. If you're reaching for `\,` or `\;`, the real fix is usually to tell $\TeX$ what the symbol is: `\{x \mid x>0\}`, not `\{x \;|\; x>0\}`; `f \colon X \to Y`, not `f:X\to Y`; `\DeclareMathOperator{\tr}{tr}`, not `\mathrm{tr}\,A`. Hand-spacing belongs in only a few places: `\quad` before a side condition (`f(x)=0, \quad x>0`), `~` before references and citations, and `\ ` (backslash-space) after a period that doesn't end a sentence (`e.g.\ `, `et al.\ `). When you inherit a file full of hand-spacing, delete it all, recompile, and add back only what visibly needs fixing.
 
 * Figures: 
   * If making figures in MATLAB, use my startup.m file to get better defaults, in particular thicker lines, larger text in labels, and the $\LaTeX$ interpreter in all text. Thin lines disappear, especially when projected as slides.

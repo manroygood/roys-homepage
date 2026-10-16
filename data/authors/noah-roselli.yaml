@@ -6,11 +6,12 @@ name:
   given: Noah
   family: Roselli
 role: Ph.D. Student, [Northwestern University](https://www.mccormick.northwestern.edu/applied-math/)
-bio: Noah, a current senior at NJIT, is working with me and Brandon Behring on generalizations
-  to the leapfrogging vortices problem
+bio: As an undergraduate at NJIT, Noah worked with me and Brandon Behring on generalizations
+  of the leapfrogging vortices problem. He is now a Ph.D. student in Engineering Sciences
+  and Applied Mathematics at Northwestern University.
 affiliations:
-- name: NJIT
-  url: http://www.njit.edu
+- name: Northwestern University
+  url: https://www.mccormick.northwestern.edu/applied-math/
 links:
 - icon: hero/envelope
   url: mailto:ndr23@njit.edu
