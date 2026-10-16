@@ -51,7 +51,7 @@ c_1 \\\\ c_2
 \alpha  \\\\ \beta
 \end{pmatrix} .
 $$
-Let the $2\times2$ matrix on the left be denoted by $M$. We know such an equation has a unique solution as long as $\det{M}\neq0$. Just as in equation $(11)$ on page 112 of Boyce, this determinant appears in the denominator of the the solution formulas for $c_1$ and $c_2$ so may not vanish unless $\alpha=\beta=0$.
+Let the $2\times2$ matrix on the left be denoted by $M$. We know such an equation has a unique solution as long as $\det{M}\neq0$. Just as in equation $(11)$ on page 112 of Boyce, this determinant appears in the denominator of the solution formulas for $c_1$ and $c_2$ so may not vanish unless $\alpha=\beta=0$.
 
 How does this works in practice?
 
@@ -136,7 +136,7 @@ which gives $c_1= -3$ and $c_2 = -4 \pi -3$.
 
 #### Variation of parameters
 
-The undetermined coefficient method only works for constant coefficient problems where the inhomogeneous term takes a particular form. When it fails, we can use the variation of paramters method.
+The undetermined coefficient method only works for constant coefficient problems where the inhomogeneous term takes a particular form. When it fails, we can use the variation of parameters method.
 
 Consider the inhomogeneous boundary value problem (BVP)
 $$

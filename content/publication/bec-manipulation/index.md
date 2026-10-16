@@ -22,7 +22,7 @@ abstract: We pose the problem of transferring a Bose-Einstein Condensate (BEC)
   functional form of the control is reduced to finite dimensions by using a
   Galerkin-type method called the chopped random basis (CRAB) method, which is
   then optimized by a genetic algorithm called differential evolution (DE).
-  Finally, we discuss the the extent to which the reduction-based optimal
+  Finally, we discuss the extent to which the reduction-based optimal
   control strategy can be refined by means of including more modes in the
   Galerkin reduction.
 summary: We use optimal control based on a Galerkin-truncated model to transfer

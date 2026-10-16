@@ -23,7 +23,7 @@ tags:
 #    weight: 1
 ---
 ### Course Info
-Almost everything is on the [course canvas page](https://njit.instructure.com/courses/13893).
+Almost everything is on the [course Canvas page](https://njit.instructure.com/courses/13893).
 
 ### MATLAB Info
 
@@ -70,7 +70,7 @@ I have created a few tutorials that we will be using over the course of the seme
 
   * **The Lorenz system:** Companion to Chapter 9 ■{{< staticref "math473/lorenzDemo.html" >}}HTML{{< /staticref >}} ■{{< staticref "math473/lorenzDemo.mlx">}} 📄 Live Script{{< /staticref >}}
 
-  * **Iterated Map Demonstration:** Companion to Strogatz 10.1--10.4 {{< staticref "math473/mapDemo.html" >}}HTML{{< /staticref >}} ■{{< staticref "math473/mapDemo.zip">}} 📄 Live Script and supporting files{{< /staticref >}}
+  * **Iterated Map Demonstration:** Companion to Strogatz 10.1--10.4 ■{{< staticref "math473/mapDemo.html" >}}HTML{{< /staticref >}} ■{{< staticref "math473/mapDemo.zip">}} 📄 Live Script and supporting files{{< /staticref >}}
 
   * **The Rössler system:** Companion to Strogatz 10.6 ■{{< staticref "math473/rosslerDemo.html" >}}HTML{{< /staticref >}} ■{{< staticref "math473/rosslerDemo.mlx">}} 📄 Live Script{{< /staticref >}}
 

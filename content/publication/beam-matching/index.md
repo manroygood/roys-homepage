@@ -36,7 +36,7 @@ featured: true
 links:
   - name: Journal
     url: https://doi.org/10.1364/JOSAA.450257
-  - name: arXiV
+  - name: arXiv
     url: https://arxiv.org/abs/2112.00728
 url_pdf: https://doi.org/10.1364/JOSAA.450257
 url_code: null

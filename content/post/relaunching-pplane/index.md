@@ -29,10 +29,10 @@ projects: []
 ---
 
 {{% callout note %}}
-I'm happy to report that my work here has been rendered obsolete. Brian Hong at the Mathworks has written new programs that are sleek and modern and in every way superior. They're even documented!  Download them [here](https://github.com/MathWorks-Teaching-Resources/Phase-Plane-and-Slope-Field).
+I'm happy to report that my work here has been rendered obsolete. Brian Hong at MathWorks has written new programs that are sleek and modern and in every way superior. They're even documented!  Download them [here](https://github.com/MathWorks-Teaching-Resources/Phase-Plane-and-Slope-Field).
 {{% /callout %}}
 
-I have written a new front end and made _many, many_ fixes to the old MATLAB programs **dfield** and **pplane**, that make them compatible with MATLAB Release 2020b. To distinguish these new working programs, I've renamed them:
+I have written a new front end and made _many, many_ fixes to the old MATLAB programs **dfield** and **pplane** that make them compatible with MATLAB Release 2020b. To distinguish these new working programs, I've renamed them:
 
 **matdfield** draws direction fields for (possibly nonautonomous) first-order scalar ordinary differential equations.
 
@@ -40,7 +40,7 @@ I have written a new front end and made _many, many_ fixes to the old MATLAB pro
 
 I've also created a simple launcher packaged as a *MATLAB App*, so all a student needs to do is click a button.
 
- The best place to download them is the [Mathworks File Exchange](https://www.mathworks.com/matlabcentral/fileexchange/86937-matdfpp).
+The best place to download them is the [MathWorks File Exchange](https://www.mathworks.com/matlabcentral/fileexchange/86937-matdfpp).
 
 They have lots of nice features: 
 
@@ -73,4 +73,4 @@ Under the hood, the program is a mess. *There is a lot I would like to fix, but 
 
 Nonetheless, there are a lot of simple cleanups that might make this more maintainable, including lots of repeated code that should be moved to separate m-files and made into functions. I will continue to maintain this code and make sure that it remains compatible with future MATLAB releases. If anyone would like to help out, or finds an error they'd like to fix, the code will be available at https://github.com/manroygood. Any other bugs you find, please let me know.
 
-**Acknowledgments**: The current codes are based on revisions by Nathanael Kazmierczak (pplane) and Giampiero Campa (dfield). I gratefully acknowledge their efforts and those of others who posted fixes MATLAB File Exchange. Several other people sent me partially working codes including Mac Hyman, Hil Meijer, Joceline Lega, Ross Parker, and Bjorn Sanstede. I got lots of help by posting questions to MATLAB Answers. These were usually answered (within minutes) by Walter Roberson, of the Mathworks. Div Tiwari, also of the Mathworks, provided additional useful suggestions.
+**Acknowledgments**: The current codes are based on revisions by Nathanael Kazmierczak (pplane) and Giampiero Campa (dfield). I gratefully acknowledge their efforts and those of others who posted fixes to the MATLAB File Exchange. Several other people sent me partially working codes including Mac Hyman, Hil Meijer, Joceline Lega, Ross Parker, and Björn Sandstede. I got lots of help by posting questions to MATLAB Answers. These were usually answered (within minutes) by Walter Roberson, of MathWorks. Div Tiwari, also of MathWorks, provided additional useful suggestions.

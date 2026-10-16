@@ -24,7 +24,7 @@ Over the semester there are four in-class MATLAB activities and four MATLAB proj
 
 See [Canvas](https://njit.instructure.com/courses/22634/modules/items/703979) for more details.
 
-For help using MATLAB, talk to your instructor (preferred option) or see a tutor during MATLAB tutoring hours at the Math Tutoring Center, described below (secondary option).
+For help using MATLAB, talk to your instructor (preferred option) or see a tutor during MATLAB tutoring hours at the Math Tutoring Center (secondary option).
 
 ---
 

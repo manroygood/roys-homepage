@@ -36,7 +36,7 @@ abstract: "We introduce a new reduction of the motion of three point vortices in
   diagram as the circulation of one vortex is varied to bifurcations of these
   equilibria."
 summary: We use Jacobi coordinates and Nambu brackets to derive a new
-  representation of the motion of three vortices which, unlinke all previous
+  representation of the motion of three vortices which, unlike all previous
   reductions, introduces no singularities into the system. We use this to study
   the scattering of dipoles by stationary vortices.
 tags:

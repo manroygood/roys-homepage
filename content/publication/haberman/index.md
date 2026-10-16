@@ -22,7 +22,7 @@ publication_short: ""
 abstract: ""
 
 # Summary. An optional shortened abstract.
-summary: "On December 31, 2018, my friend and colleauge Rich Haberman passed away. Alejandro Aceves, Peter Miller, and I wrote a short tribute."
+summary: "On December 31, 2018, my friend and colleague Rich Haberman passed away. Alejandro Aceves, Peter Miller, and I wrote a short tribute."
 
 tags: []
 categories: ["other"]

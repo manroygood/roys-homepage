@@ -5,7 +5,7 @@ summary: Fall 2023
 weight: 671
 
 # Page metadata.
-title: Math 671–Asymptotic Methods
+title: Math 671 Asymptotic Methods
 draft: false # Is this a draft? true/false
 toc: false  # Show table of contents? true/false
 type: docs
@@ -15,7 +15,7 @@ tags:
 ---
 
 ### Course Info
-Almost everything is on the [course canvas page](https://njit.instructure.com/courses/31528).
+Almost everything is on the [course Canvas page](https://njit.instructure.com/courses/31528).
 
 ### Why do I have this webpage then?
 
@@ -34,6 +34,7 @@ and at highlighting code, like this Fibonacci sequence calculation in MATLAB
 % Good code has comments
 n = 5;
 a = zeros(1,n);
+a(1:2) = 1;
 for k = 3:n
    a(k) = a(k-1) + a(k-2);
 end

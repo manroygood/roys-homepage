@@ -8,7 +8,7 @@ authors:
   - David McLaughlin
 publication_types:
   - article-journal
-abstract: Downstream development is a term encompassinga variety of effects
+abstract: Downstream development is a term encompassing a variety of effects
   relating to the propagation of storm systems at midlatitude. We investigate a
   mechanism behind downstream development and study how wave propagation is
   affected by varying several physical parameters. We then develop a multiple

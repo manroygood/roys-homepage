@@ -18,7 +18,7 @@ tags:
 
 ### Course Info
 
-Almost everything is on the [course canvas page](https://njit.instructure.com/courses/25954/) or on the official Math Department [syllabus](https://docs.google.com/document/d/1OdW1ayElsS67pVct_RhMLtWu22ovh7k_ewEhhuUq9Z8). Canvas and Google Docs are bad at rendering mathematics and computer code, so I maintain this webpage to post math-heavy and code-heavy information
+Almost everything is on the [course Canvas page](https://njit.instructure.com/courses/25954/) or on the official Math Department [syllabus](https://docs.google.com/document/d/1OdW1ayElsS67pVct_RhMLtWu22ovh7k_ewEhhuUq9Z8). Canvas and Google Docs are bad at rendering mathematics and computer code, so I maintain this webpage to post math-heavy and code-heavy information.
 
 #### MATLAB startup file
 I use a file [`startup.m`](https://www.mathworks.com/help/matlab/ref/startup.html) to replace the default MATLAB graphing settings with something a little bit nicer. In particular, I include $\LaTeX$ formatting in my axis labels. $\LaTeX$ is a markup language that mathematicians use to typeset math. If any of my MATLAB programs give you errors, run these lines first:

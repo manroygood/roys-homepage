@@ -1,6 +1,6 @@
 ---
 # Course title, summary, and position.
-linktitle: NQG_Valenciennes
+linktitle: Valenciennes 2024
 summary: One week summer school on Nonlinear Quantum Graphs, Valenciennes, France, June 17-21, 2024
 weight: 1000
 
@@ -14,7 +14,7 @@ tags:
 
 ---
 
-I was invited to give a series of five one-hour lectures on numerical methods for quantum graphs at a [Summer School](https://nqg.sciencesconf.org) at [Université Polytechnique Hauts-de-France](https://www.uphf.fr/en) in June, 2024. Thanks to the organizers
+I was invited to give a series of five one-hour lectures on numerical methods for quantum graphs at a [Summer School](https://nqg.sciencesconf.org) at [Université Polytechnique Hauts-de-France](https://www.uphf.fr/en) in June 2024. Thanks to the organizers
 
 * Colette De Coster (UPHF, Valenciennes)
 * Damien Galant (UPHF, Valenciennes and UMONS, Mons, Belgium)
@@ -44,9 +44,9 @@ Below are my handwritten lecture notes and links to my supplementary slides with
 
 ### Examples from Delio Mugnolo's lectures
 
-* {{< staticref "nqg/mugnoloExample1.html" >}}Example 1{{< /staticref >}} An upper bound on the eigevalues of a quantum graph Laplacian. 
-* {{< staticref "nqg/mugnoloExample2.html" >}}Example 2{{< /staticref >}} A lower bound on the eigevalues of a quantum graph Laplacian.
-* {{< staticref "nqg/mugnoloExample3.html" >}}Example 3{{< /staticref >}} Monotonicity of the eigevalues of a quantum graph Laplacian as the length of an edge is increased.
+* {{< staticref "nqg/mugnoloExample1.html" >}}Example 1{{< /staticref >}} An upper bound on the eigenvalues of a quantum graph Laplacian. 
+* {{< staticref "nqg/mugnoloExample2.html" >}}Example 2{{< /staticref >}} A lower bound on the eigenvalues of a quantum graph Laplacian.
+* {{< staticref "nqg/mugnoloExample3.html" >}}Example 3{{< /staticref >}} Monotonicity of the eigenvalues of a quantum graph Laplacian as the length of an edge is increased.
 
 ### Examples from Diego Noja's lectures
 
@@ -55,9 +55,9 @@ Below are my handwritten lecture notes and links to my supplementary slides with
 ## References
 
 ### Main reference
-* Goodman, Roy H, Grace Conte, and Jeremy L Marzuola. 2023.
+* Goodman, Roy H, Grace Conte, and Jeremy L Marzuola. 2025.
 [QGLAB: A MATLAB Package for Computations on
-Quantum Graphs.]({{< relref "/publication/qglab" >}}) *arXiv 2401.00561*.
+Quantum Graphs.]({{< relref "/publication/qglab" >}}) *SIAM Journal on Scientific Computing* 47: B428–53.
 
 ### Inspirations for this work
 
@@ -97,7 +97,7 @@ Matlab</span>*. SIAM.
 construction of rectangular differentiation matrices</span>.” *IMA
 Journal of Numerical Analysis* 36: 618 - 632.
 
-### Implicit-explict Runge-Kutta methods
+### Implicit-explicit Runge-Kutta methods
 
 * Ascher, Uri M, Steven J Ruuth, and Raymond J Spiteri. 1997.
 “<span class="nocase">Implicit-explicit Runge-Kutta methods for

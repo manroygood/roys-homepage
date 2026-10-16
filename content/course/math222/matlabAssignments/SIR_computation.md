@@ -23,7 +23,7 @@ This definition of the __Reproductive ratio__ should guide your thinking;
 __The Reproductive Ratio $R_0$:__ A key parameter in epidemiology is the basic reproductive ratio, $R_0$. It is defined as the average number of secondary cases transmitted by a single infected individual that is placed into a fully susceptible population. In other words, $R_0$ tells us about the initial rate of spread of the disease. Hence, if $R_0 > 1$, there will be an epidemic, and if $R_0 < 1$, the introduced infecteds will recover (or die) without being able to replace themselves by new infections. In this model, it is pretty easy to derive $R_0$. The disease-free state corresponds to: $S=N$, $I=0$, $R=0$. If one infected individual appears in the population, there will be an epidemic if and only if $\frac{dI}{dt} > 0$. By replacing $S$ with $N$ in the $\frac{dI}{dt}$ equation, this yields  $\frac{N \beta}{\gamma} > 1$. That is:
 $$ R_0 = \frac{\beta N}{\gamma}.$$ Check this formula by simulating the model for different sets of parameters. Fix $N$, and vary $\beta$ and $\gamma$. Choose your values such as to have combinations with both $R_0 > 1$ and $R_0 < 1$. 
 
-[^3]:MATLAB hint: Using the equality operator == compares two matrices of equal size element by element, and yields a logical matrix (a matrix whose entries are all logical true (1) or false (0)) of the same size as a result. In contrast, the function __isequal()__ checks wheter two matrices are identical and returns a single logical value.
+[^3]:MATLAB hint: Using the equality operator == compares two matrices of equal size element by element, and yields a logical matrix (a matrix whose entries are all logical true (1) or false (0)) of the same size as a result. In contrast, the function __isequal()__ checks whether two matrices are identical and returns a single logical value.
 
 ### Part 2
 
@@ -48,6 +48,6 @@ __The Vaccine__ Now that we have a vaccine, we can think about how vaccinating a
 ---
 For more information, see this nice article[^2]. [+plus Magazine](https://plus.maths.org/content/tags/covid-19) has a large collection of undergraduate-level articles on mathematics useful in understanding various aspects the COVID-19 pandemic. Another good resource comes from the [American Mathematical Society](http://www.ams.org/home/covid-19), see under the _Mathematical Modeling_ subheading.
 
-[^1]: Kermack, W. O. and McKendrick, A.G. (1927) [Contribution to the matimatical theory of epidemics--1.](https://royalsocietypublishing.org/doi/10.1098/rspa.1927.0118), _Proc. Roy. Soc._ __115A__, 700.
+[^1]: Kermack, W. O. and McKendrick, A.G. (1927) [Contribution to the mathematical theory of epidemics--1.](https://royalsocietypublishing.org/doi/10.1098/rspa.1927.0118), _Proc. Roy. Soc._ __115A__, 700.
 
 [^2]: Keeling, M. (2001) [The Mathematics of Diseases](https://plus.maths.org/content/os/issue14/features/diseases/index), +plus magazine
