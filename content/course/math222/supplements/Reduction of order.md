@@ -2,6 +2,7 @@
 title: "Supplement: Reduction of order Simplified"
 linktitle: "Reduction of Order"
 toc: true
+type: docs
 draft: false
 weight: 305
 ---

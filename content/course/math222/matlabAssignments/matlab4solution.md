@@ -2,6 +2,7 @@
 title: MATLAB Assignment 4 Solution
 linktitle: 🐱 Project 4 Answer
 toc: true 
+type: docs
 date: "2021-01-06"
 draft: 	false
 weight: 245

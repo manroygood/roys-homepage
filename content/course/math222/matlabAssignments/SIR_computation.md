@@ -2,6 +2,7 @@
 title: "Project 4: SIR Models of Epidemics: Computation"
 linktitle: "Project 4: SIR Models"
 toc: true
+type: docs
 draft: false
 weight: 240
 ---

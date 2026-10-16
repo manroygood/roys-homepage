@@ -2,6 +2,7 @@
 title: MATLAB Project 1
 linktitle: Project 1, Onramp
 toc: false
+type: docs
 date: "2021-01-05"
 draft: false
 

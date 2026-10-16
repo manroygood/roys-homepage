@@ -8,6 +8,7 @@ weight: 1000
 title: Summer School on Nonlinear Quantum Graphs
 draft: false # Is this a draft? true/false
 toc: false  # Show table of contents? true/false
+type: docs
 tags: 
     - current
 

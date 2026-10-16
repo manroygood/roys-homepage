@@ -8,6 +8,7 @@ weight: 614
 title: Math 614 Numerical Methods I
 draft: false # Is this a draft? true/false
 toc: false  # Show table of contents? true/false
+type: docs
 tags: 
     - past
 

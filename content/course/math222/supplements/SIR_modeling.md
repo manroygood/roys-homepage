@@ -2,6 +2,7 @@
 title: "Supplement: Modeling Epidemics with SIR Models"
 linktitle: "Epidemics Modeling Supplement"
 toc: true
+type: docs
 draft: false
 weight: 307
 ---

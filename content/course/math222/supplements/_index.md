@@ -2,6 +2,7 @@
 title: Supplements to Sections 10.1 & 10.4 of Boyce
 linktitle: Supplements
 toc: false
+type: docs
 date: "2021-01-06"
 draft: false
 weight: 300

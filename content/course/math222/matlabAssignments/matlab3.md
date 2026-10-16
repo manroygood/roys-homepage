@@ -2,6 +2,7 @@
 title: MATLAB Project 3
 linktitle: Project 3, Euler's method
 toc: false
+type: docs
 date: "2021-01-05"
 draft: false 
 

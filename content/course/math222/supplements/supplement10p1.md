@@ -2,6 +2,7 @@
 title: Supplement to Section 10.1 of Boyce & Diprima
 linktitle: Supplement to 10.1
 toc: false
+type: docs
 date: "2020-02-26"
 draft: false
 

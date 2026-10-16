@@ -2,6 +2,7 @@
 title: "Supplement: Programming in MATLAB"
 linktitle: "MATLAB Programming"
 toc: true
+type: docs
 date: "2020-08-07"
 lastmod: "2021-01-06T00:00:00Z"
 draft: false

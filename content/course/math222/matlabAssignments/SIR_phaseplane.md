@@ -2,6 +2,7 @@
 title: "Project 4 Solution:"
 linktitle: "🤧 Project 4 solutions"
 toc: true
+type: docs
 draft: true
 weight: 245
 ---

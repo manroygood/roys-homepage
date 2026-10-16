@@ -2,6 +2,7 @@
 title: MATLAB Project 2
 linktitle: Project 2, Slope field
 toc: false
+type: docs
 date: "2021-01-05"
 draft: false
 

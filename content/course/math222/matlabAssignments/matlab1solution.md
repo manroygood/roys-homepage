@@ -2,6 +2,7 @@
 title: MATLAB Project 2 Solution
 linktitle:  😍 Project 2 Solution
 toc: false 
+type: docs
 date: "2020-01-27"
 draft: false
 

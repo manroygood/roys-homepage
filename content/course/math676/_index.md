@@ -9,6 +9,7 @@ title: Math 676 Graduate Differential Equations
 
 draft: false # Is this a draft? true/false
 toc: false  # Show table of contents? true/false
+type: docs
 tags: 
     - previous
 

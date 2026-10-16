@@ -2,6 +2,7 @@
 title: MATLAB Projects
 linktitle: MATLAB Projects
 toc: false
+type: docs
 date: "2020-01-28"
 draft: false
 weight: 200

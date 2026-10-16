@@ -10,6 +10,7 @@ date: "2020-12-07T00:00:00Z"
 lastmod: "2020-12-07T00:00:00Z"
 draft: false # Is this a draft? true/false
 toc: false  # Show table of contents? true/false
+type: docs
 tags: 
 - previous
 

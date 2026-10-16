@@ -8,6 +8,7 @@ weight: 671
 title: Math 671–Asymptotic Methods
 draft: false # Is this a draft? true/false
 toc: false  # Show table of contents? true/false
+type: docs
 tags: 
     - previous
 
