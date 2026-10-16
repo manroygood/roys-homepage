@@ -1,0 +1,28 @@
+{{/* Tag cloud block, ported from the old Wowchemy `tag_cloud` widget. */}}
+{{ $page := .wcPage }}
+{{ $block := .wcBlock }}
+{{ $content := $block.content | default dict }}
+{{ $design := $block.design | default dict }}
+{{ $taxonomy := $content.taxonomy | default "tags" }}
+{{ $count := int ($content.count | default 20) }}
+{{ $fmin := float ($design.font_size_min | default 0.8) }}
+{{ $fmax := float ($design.font_size_max | default 2.5) }}
+{{ $terms := index site.Taxonomies $taxonomy }}
+{{ with $terms }}
+  {{ $sorted := .ByCount }}
+  {{ if gt $count 0 }}{{ $sorted = first $count $sorted }}{{ end }}
+  {{ $max := float (index $sorted 0).Count }}
+  {{ $min := float (index $sorted (sub (len $sorted) 1)).Count }}
+  {{ $spread := sub (math.Log $max) (math.Log $min) }}
+  <div class="flex flex-col items-center max-w-prose mx-auto gap-3 px-6">
+    {{ with $content.title }}<div class="mb-6 text-3xl font-bold text-gray-900 dark:text-white">{{ . }}</div>{{ end }}
+    <div class="flex flex-wrap justify-center items-baseline gap-x-4 gap-y-2">
+      {{ range sort $sorted ".Page.Title" }}
+        {{ $w := 0.0 }}
+        {{ if gt $spread 0 }}{{ $w = div (sub (math.Log (float .Count)) (math.Log $min)) $spread }}{{ end }}
+        {{ $size := add $fmin (mul (sub $fmax $fmin) $w) }}
+        <a href="{{ .Page.RelPermalink }}" class="text-primary-700 hover:underline dark:text-primary-300" style="font-size: {{ $size }}rem">{{ .Page.Title }}</a>
+      {{ end }}
+    </div>
+  </div>
+{{ end }}

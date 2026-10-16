@@ -1,0 +1,33 @@
+---
+schema: hugoblox/author/v1
+slug: atul-anurag
+name:
+  display: Atul Anurag (अतुल अनुराग)
+  given: Atul
+  family: Anurag
+role: Visiting Assistant Professor, [Ramapo College of New Jersey](https://www.ramapo.edu)
+bio: Atul continues to work with Prof. Goodman on point vortex dynamics.
+affiliations:
+- name: Ramapo College of New Jersey
+  url: https://www.ramapo.edu
+links:
+- icon: hero/globe-americas
+  url: http://atulanurag.com
+- icon: hero/envelope
+  url: mailto:aa2894@njit.edu
+- icon: hero/book-open
+  url: https://digitalcommons.njit.edu/dissertations/1851/
+interests:
+- Dynamical Systems and Bifurcations
+education:
+- degree: BS Mathematics
+  institution: Ramjas College, University of Delhi
+  end: '2015-06-01'
+- degree: M.Sc. Applied Mathematics
+  institution: National Institute of Technology, Warangal, Telangana, India
+  end: '2017-06-01'
+- degree: Ph.D. Mathematical Sciences
+  institution: New Jersey Institute of Technology
+  end: '2025-06-01'
+user_groups:
+- Ph.D. Alumni

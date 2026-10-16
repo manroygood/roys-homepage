@@ -1,0 +1,49 @@
+---
+schema: hugoblox/author/v1
+slug: admin
+is_owner: true
+name:
+  display: Roy Goodman
+  given: Roy
+  family: Goodman
+role: Professor, Associate Chair for Graduate Studies, [Department of Mathematical
+  Sciences](https://math.njit.edu/)
+bio: |-
+  I am a professor in the Department of Mathematical Sciences at NJIT. My research applies methods of dynamical systems to (conservative, dispersive) nonlinear wave equations arising, for example, in optics and fluid mechanics. I am interested in dynamical and bifurcation phenomena, and I use techniques from Hamiltonian mechanics and perturbation theory, as well as extensive computations. My current research in vortex dynamics is supported by the NSF under [DMS-2206016](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2206016&HistoricalAwards=false).
+
+  I led the effort to start the [SIAM New York-New Jersey-Pennsylvania Section (SIAM NNP)](https://sites.google.com/view/siam-nynjpa/home) and was its first president in 2023-2024. I have handed over the reins to a new leadership group.
+affiliations:
+- name: Department of Mathematical Sciences, New Jersey Institute of Technology
+  url: https://www.njit.edu
+links:
+- icon: hero/envelope
+  url: mailto:goodman@njit.edu
+- icon: brands/bluesky
+  url: https://bsky.app/profile/roygoodman.net
+- icon: academicons/google-scholar
+  url: https://scholar.google.com/citations?user=0W8zeSMAAAAJ
+- icon: academicons/arxiv
+  url: https://arxiv.org/search/?searchtype=author&query=Goodman%2C+R+H
+- icon: academicons/cv
+  url: "/files/CVgoodman.pdf"
+- icon: brands/github
+  url: https://github.com/manroygood
+- icon: brands/mastodon
+  url: https://mathstodon.xyz/@manroygood
+- icon: hero/share
+  url: https://genealogy.math.ndsu.nodak.edu/id.php?id=33125
+interests:
+- Nonlinear Waves
+- Dynamical Systems
+- Asymptotics and Perturbation Methods
+- Scientific Computating
+- Point Vortices
+education:
+- degree: PhD, Mathematical Sciences
+  institution: New York University
+  end: '1999-06-01'
+- degree: BS, Mathematics
+  institution: University of Michigan
+  end: '1994-06-01'
+tagline: My research interests include dynamical systems and nonlinear waves, vortex
+  dynamics, quantum graphs, and network inference

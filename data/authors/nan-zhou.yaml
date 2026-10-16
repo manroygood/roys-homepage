@@ -1,0 +1,26 @@
+---
+schema: hugoblox/author/v1
+slug: nan-zhou
+name:
+  display: Nan Zhou (周南)
+  given: Nan
+  family: Zhou
+role: Graduate Student
+bio: Nan is working on a bifurcation problem in Bose-Einstein Condensates.
+affiliations:
+- name: NJIT
+  url: http://www.njit.edu
+links:
+- icon: hero/envelope
+  url: mailto:nz82@njit.edu
+interests:
+- Dynamical Systems and Bifurcations
+education:
+- degree: BS Mechanical Engineering
+  institution: Southwest Jiaotong University
+  end: '2018-06-01'
+- degree: M.Sc. Mechanical Engineering
+  institution: University of Southern California
+  end: '2021-06-01'
+user_groups:
+- Ph.D. Students

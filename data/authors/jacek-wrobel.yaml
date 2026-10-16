@@ -1,0 +1,35 @@
+---
+schema: hugoblox/author/v1
+slug: jacek-wrobel
+name:
+  display: Jacek Wróbel
+  given: Jacek
+  family: Wróbel
+role: Member of Technical Staff, [Draper Laboratories](https://www.draper.com)
+bio: |-
+  Jacek is a simulation engineer at Draper Labs in Cambridge, MA.
+
+  After completing his Ph.D. under the supervision of Roy Goodman, Jacek spent a year as a postdoc at NJIT working with Michael Booty and Michael Siegel. He spent three years as a postdoc at Tulane University with Lisa Fauci and Ricardo Cortez. He worked at Raytheon before beginning his current job as member of technical staff at Draper Laboratories.
+affiliations:
+- name: Draper Laboratories
+  url: https://www.draper.com
+links:
+- icon: academicons/google-scholar
+  url: https://scholar.google.com/citations?user=PERSON-ID
+- icon: brands/linkedin
+  url: https://www.linkedin.com/in/jacek-wróbel-338a08ab
+- icon: hero/book-open
+  url: https://digitalcommons.njit.edu/dissertations/267/
+interests:
+- Invariant Manifolds
+- Computation
+- Computational Fluid Mechanics
+education:
+- degree: Ph.D. in Mathematical Sciences
+  institution: New Jersey Institute of Technology
+  end: '2011-06-01'
+- degree: M.S. in Mathematics
+  institution: AGH University of Science and Technology, Kraków, Poland
+  end: '2005-06-01'
+user_groups:
+- Ph.D. Alumni

@@ -1,0 +1,32 @@
+---
+schema: hugoblox/author/v1
+slug: noah-roselli
+name:
+  display: Noah Roselli
+  given: Noah
+  family: Roselli
+role: Ph.D. Student, [Northwestern University](https://www.mccormick.northwestern.edu/applied-math/)
+bio: Noah, a current senior at NJIT, is working with me and Brandon Behring on generalizations
+  to the leapfrogging vortices problem
+affiliations:
+- name: NJIT
+  url: http://www.njit.edu
+links:
+- icon: hero/envelope
+  url: mailto:ndr23@njit.edu
+interests:
+- Physics
+- Dynamical Systems and Bifurcations
+- Hamiltonian Systems
+education:
+- degree: BS in Physics
+  institution: New Jersey Institute of Technology
+  end: '2022-06-01'
+- degree: B.S. in Mathematics
+  institution: New Jersey Institute of Technology
+  end: '2022-06-01'
+- degree: Ph.D. in Engineering Science and Applied Mathematics
+  institution: Northwestern University
+  end: 2027 (Expected)-06-01
+user_groups:
+- BS Alumni

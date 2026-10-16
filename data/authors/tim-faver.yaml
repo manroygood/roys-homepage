@@ -1,0 +1,16 @@
+---
+schema: hugoblox/author/v1
+slug: tim-faver
+name:
+  display: Timothy Faver
+  given: Timothy
+  family: Faver
+role: Assistant Professor
+affiliations:
+- name: Kennesaw State University
+  url: https://csm.kennesaw.edu/mathematics/index.php
+links:
+- icon: hero/envelope
+  url: mailto:tfaver1@kennesaw.edu
+- icon: hero/globe-americas
+  url: https://tefaver.com

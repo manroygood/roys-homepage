@@ -1,0 +1,41 @@
+---
+schema: hugoblox/author/v1
+slug: brandon
+name:
+  display: Brandon Behring
+  given: Brandon
+  family: Behring
+role: Data Scientist, [Prudential Insurance](http://www.prudential.com)
+bio: |-
+  Brandon defended his dissertation on leapfrogging point vortices in August 2020 He spent about a year as a postdoc in the [Dynamical Systems Laboratory](http://engineering.nyu.edu/dsl/) at the NYU Tandon School of NYU. He is now a data scientist at Prudential Insurance, and has a very cute baby girl.
+
+  Brandon completed his Ph.D. in Mathematical Sciences at NJIT. His dissertation project concerns the stability and associated dynamics of systems of leapfrogging vortices.
+affiliations:
+- name: Prudential Insurance
+  url: http://www.prudential.com
+links:
+- icon: hero/envelope
+  url: mailto:bmb29@njit.edu
+- icon: hero/book-open
+  url: https://digitalcommons.njit.edu/dissertations/1491/
+- icon: brands/twitter
+  url: https://twitter.com/AnOddParadigm
+- icon: brands/linkedin
+  url: https://www.linkedin.com/in/brandon-behring/
+interests:
+- Hamiltonian Systems
+- Vortex Motions
+- Computation
+- Data Science
+education:
+- degree: Ph.D. Applied Mathematics
+  institution: New Jersey Institute of Technology
+  end: '2020-06-01'
+- degree: MS, Mathematical Sciences
+  institution: New York University
+  end: '2011-06-01'
+- degree: BS, Mathematics
+  institution: University of San Francisco
+  end: '2006-06-01'
+user_groups:
+- Ph.D. Alumni

@@ -1,0 +1,16 @@
+---
+schema: hugoblox/author/v1
+slug: mau-porfiri
+name:
+  display: Maurizio Porfiri
+  given: Maurizio
+  family: Porfiri
+role: Professor
+affiliations:
+- name: New York University
+  url: https://wp.nyu.edu/dsl/maurizio-porfiri/
+links:
+- icon: hero/envelope
+  url: mailto:mporfiri@nyu.edu
+- icon: hero/globe-americas
+  url: https://wp.nyu.edu/dsl/maurizio-porfiri/

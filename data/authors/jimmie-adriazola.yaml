@@ -1,0 +1,45 @@
+---
+schema: hugoblox/author/v1
+slug: jimmie-adriazola
+name:
+  display: Jimmie Adriazola
+  given: Jimmie
+  family: Adriazola
+role: Presidential Postdoctoral Fellow, [Arizona State University](https://www.asu.edu)
+bio: |-
+  In addition to studying applied mathematics and physics, Jimmie plays jazz guitar in local venues.
+
+  Jimmie's dissertation research focused on the application of methods of optimal control to designing structures for the control of nonlinear waves in optics and BEC's. He also worked as a research assistant in the NJIT Physics Department with professors John Federici and Ian Gatley.
+affiliations:
+- name: Arizona State University
+  url: https://www.asu.edu
+links:
+- icon: hero/globe-americas
+  url: https://search.asu.edu/profile/5123395
+- icon: hero/envelope
+  url: mailto:jadriazola@mail.smu.edu
+- icon: hero/book-open
+  url: https://digitalcommons.njit.edu/dissertations/1562/
+- icon: brands/linkedin
+  url: https://www.linkedin.com/in/jimmie-adriazola-7694a11a9/
+- icon: brands/researchgate
+  url: https://www.researchgate.net/profile/Jimmie-Adriazola
+interests:
+- Mathematical Physics
+- Nonlinear Waves
+- Optimal Control
+education:
+- degree: B.S. Applied Mathematics
+  institution: New Jersey Institute of Technology
+  end: '2016-06-01'
+- degree: Ph.D. Applied Mathematics
+  institution: New Jersey Institute of Technology
+  end: '2021-06-01'
+- degree: Postdoc, Mathematics Department
+  institution: UC Santa Barbara
+  end: 2022-2023-06-01
+- degree: NSF MPS-Ascend Postdoctoral Fellow
+  institution: Southern Methodist University
+  end: 2023-2024-06-01
+user_groups:
+- Ph.D. Alumni

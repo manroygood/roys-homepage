@@ -1,0 +1,6 @@
+{{/*
+    Ported from Wowchemy so existing content keeps working.
+    #0 : URL for the link (if local path, it is relative to the site root).
+    #1 : optional, pass "newtab" to open the link in a new tab.
+*/}}
+<a href="{{ .Get 0 | relURL }}"{{ if len .Params | eq 2 }} target="_blank" rel="noopener"{{ end }}>{{ .Inner }}</a>

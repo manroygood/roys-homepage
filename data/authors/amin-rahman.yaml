@@ -1,0 +1,20 @@
+---
+schema: hugoblox/author/v1
+slug: amin-rahman
+name:
+  display: Amin Rahman
+  given: Amin
+  family: Rahman
+role: Senior Scientist
+bio: |-
+  Amin did his undergrad and Ph.D. at NJIT. After he took the capstone class with me, he and two other students worked to turn that project into a research paper.
+
+  Amin did his undergrad and Ph.D. at NJIT. After he took the capstone class with me, he and two other students worked to turn that project into a research paper.
+affiliations:
+- name: ReynKo Inc
+  url: https://pilotwaves.github.io
+links:
+- icon: hero/envelope
+  url: mailto:amin.rahman@ttu.edu
+- icon: hero/globe-americas
+  url: http://myweb.ttu.edu/aminrahm/

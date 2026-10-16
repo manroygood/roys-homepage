@@ -1,0 +1,16 @@
+---
+schema: hugoblox/author/v1
+slug: amir-sagiv
+name:
+  display: Amir Sagiv
+  given: Amir
+  family: Sagiv
+role: Postdoc
+affiliations:
+- name: Columbia University
+  url: ''
+links:
+- icon: hero/envelope
+  url: mailto:as6011@columbia.edu
+- icon: hero/globe-americas
+  url: https://apam.columbia.edu/amir-sagiv

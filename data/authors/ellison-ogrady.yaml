@@ -1,0 +1,25 @@
+---
+schema: hugoblox/author/v1
+slug: ellison-ogrady
+name:
+  display: Ellison O'Grady
+  given: Ellison
+  family: O'Grady
+role: PhD Student, NJIT
+bio: Ellison is working with Professor Goodman on the chaotic scatterng of solitary
+  waves
+affiliations:
+- name: NJIT
+  url: http://www.njit.edu
+links:
+- icon: hero/envelope
+  url: mailto:eo224@njit.edu
+interests:
+- Applied Math
+- Chaotic Scattering
+education:
+- degree: BS in Mathematics
+  institution: New Jersey Institute of Technology
+  end: 2024 (Expected)-06-01
+user_groups:
+- BS Alumni

@@ -1,0 +1,17 @@
+---
+schema: hugoblox/author/v1
+slug: richard-haberman
+name:
+  display: Richard Haberman
+  given: Richard
+  family: Haberman
+role: Professor
+bio: Roy approached Rich with a problem that he was stuck on in 2002. Thus began a
+  long-term friendship and collaboration. Rich passed away in December, 2018. See
+  a remembrance [here](https://dsweb.siam.org/The-Magazine/Article/in-memoriam-richard-haberman).
+affiliations:
+- name: Southern Methodist University
+  url: ''
+links:
+- icon: hero/globe-americas
+  url: https://s3.smu.edu/des/registrar/retiredfaculty/?a=bio&pid=49&name=Richard%20Haberman

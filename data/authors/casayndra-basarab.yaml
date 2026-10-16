@@ -1,0 +1,33 @@
+---
+schema: hugoblox/author/v1
+slug: casayndra-basarab
+name:
+  display: Casayndra Basarab
+  given: Casayndra
+  family: Basarab
+role: Clinical Assistant Professor, [Pace University](http://www.pace.edu)
+bio: Casayndra wrote her dissertation on Hamiltonian Hopf bifurcations in discrete
+  self-trapping equations. Since 2016 she has been an instructor at Pace University
+  in New York City.
+affiliations:
+- name: Pace University
+  url: http://www.pace.edu
+links:
+- icon: hero/envelope
+  url: mailto:cbasarab@pace.edu
+- icon: hero/globe-americas
+  url: https://www.pace.edu/profile/casayndra-basarab
+- icon: hero/book-open
+  url: https://digitalcommons.njit.edu/dissertations/87/
+interests:
+- Dynamical Systems and Bifurcations
+- Hamiltonian Systems
+education:
+- degree: Ph.D. in Mathematical Sciences
+  institution: New Jersey Institute of Technology
+  end: '2016-06-01'
+- degree: B.S. in Mathematics
+  institution: New Jersey Institute of Technology
+  end: '2011-06-01'
+user_groups:
+- Ph.D. Alumni

@@ -1,0 +1,16 @@
+---
+schema: hugoblox/author/v1
+slug: doug-wright
+name:
+  display: Doug Wright
+  given: Doug
+  family: Wright
+role: Professor
+affiliations:
+- name: Drexel University
+  url: ''
+links:
+- icon: hero/envelope
+  url: mailto:jdoug@math.drexel.edu
+- icon: hero/globe-americas
+  url: https://www.math.drexel.edu/~jdoug/

@@ -1,0 +1,27 @@
+---
+schema: hugoblox/author/v1
+slug: gracie-conte
+name:
+  display: Gracie Conte
+  given: Gracie
+  family: Conte
+role: Senior Professional Staff I
+bio: I helped Jeremy Marzuola advise Gracie on her Ph.D. dissertation on numerical
+  methods for quantum graphs at UNC-Chapel Hill.
+affiliations:
+- name: Johns Hopkins University Applied Physics Laboratory
+  url: https://www.jhuapl.edu
+links:
+- icon: hero/globe-americas
+  url: https://www.gconte.net
+- icon: hero/book-open
+  url: https://cdr.lib.unc.edu/concern/dissertations/8623j7218
+- icon: brands/linkedin
+  url: https://www.linkedin.com/in/gconte23/
+interests:
+- Numerical Analysis
+- Quantum Graphs
+education:
+- degree: Ph.D.
+  institution: University of North Carolina
+  end: '2022-06-01'
