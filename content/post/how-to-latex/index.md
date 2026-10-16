@@ -8,7 +8,7 @@ authors: ["admin"]
 tags: []
 categories: []
 date: 2021-07-02T22:22:55-04:00
-lastmod: 2021-07-02T22:22:55-04:00
+lastmod: 2026-10-16T12:00:00-04:00
 featured: false
 draft: false
 
@@ -28,7 +28,9 @@ image:
 projects: []
 ---
 
-{{% callout warning %}} When I wrote this post, I had just learned about the _physics_ package for $\LaTeX$ which can make typesetting a lot of the things I work on a lot easier.  I've since found out from [this discussion](https://tex.stackexchange.com/questions/470819/macros-dv-and-pdv-eat-the-subsequent-parenthesis-argument) that this package can be somewhat dangerous. I'm not giving up on it, but handle with care!{{% /callout %}} 
+**TL;DR:** Start from [my template on GitHub](https://github.com/manroygood/LaTeX-Template), then read the style guide below.
+
+*Last updated October 2026. I first wrote this post in 2021 around the* **physics** *package. That package hasn't been updated since 2012 and has some [known pitfalls](https://tex.stackexchange.com/questions/470819/macros-dv-and-pdv-eat-the-subsequent-parenthesis-argument), so I now recommend two maintained replacements:* **physics2** *(delimiters, bra–ket notation, matrices) and* **derivative** *(derivatives and differentials).* 
 
 $\LaTeX$ can be intimidating for students who are just learning it, but never fear: this document will help. If we’re going to publish something together, it will eventually have to meet my standards. By following this document, you’ll learn my approach to writing in $\LaTeX$ and hopefully avoid having to do things twice.
 
@@ -53,7 +55,7 @@ Well-constructed $\LaTeX$ should be easy to read, and should be focused on repre
 
 Good $\LaTeX$ writing should make extensive use of macros. In writing computer programs, whenever there is a piece of code that gets re-used multiple times and accomplishes a specific task, it makes sense to define a function and to call that function each time you need to accomplish that task. In writing $\LaTeX$, the equivalent idea is to use macros to replace frequently used snippets. There are a number of important reasons for this (how we do so will be discussed later):
 
-* Macros help you to encode meaning rather than typesetting instructions. For example the absolute value of $x$ should appear as `$\abs{x}$`, not as `$|x|$`.  (In this case, rather than write your own, you should use the macro provided by the *physics* package.)
+* Macros help you to encode meaning rather than typesetting instructions. For example the absolute value of $x$ should appear as `$\abs{x}$`, not as `$|x|$`. (See below for two good ways to define `\abs`.)
 * Long strings of typesetting are hard for you to parse and to type exactly the same every time. Suppose you define a complicated mathematical object that you decide to name ${{\mathcal C}^\infty_{\mathrm{c}}}$. Do you want to type `{\mathcal C}^\infty_{\mathrm{c}}` every time you use it and have to have that expression repeatedly taking up half a line of your .tex document? Or would you rather define a macro `\CIc` that you can use repeatedly?
 * Macros make it easier to change the document. Suppose that you decide instead to change your notation to ${{\mathfrak C}^\infty_{\mathrm{c}}}$. If you define a macro, you change it once and the change appears everywhere. Otherwise, you have to carefully comb through your document to find every occurrence of this expression.
 
@@ -64,17 +66,14 @@ I have used four methods to declare macros:
 * `\newcommand` can take arguments. Examples:
   * `\newcommand{\p}{\mathbf{p}}` Now you can type `$\p$` to get $\mathbf{p}$.
   * `\newcommand{\CIc}{{\mathcal C}^\infty_{\mathrm{c}}}` for the above example
-  * `\newcommand{\diff}[2]{\frac{d #1}{d #2}}` defines a basic derivative macro. Example: `\diff{y}{x}` would give $\frac{dy}{dx}$. (Better: use the **physics** package.)
+  * `\newcommand{\diff}[2]{\frac{d #1}{d #2}}` defines a basic derivative macro. Example: `\diff{y}{x}` would give $\frac{dy}{dx}$. (Better: use `\odv` from the **derivative** package.)
 * `\renewcommand` is just like `\newcommand` but you use it if the command you want to assign is already assigned to something else.
-* `\DeclareMathOperator` (requires the **amsmath** package; note the capitalization). You'll note that functions such as sine and cosine are written in Roman characters and are defined as operators, which affects the spacing between them and their argument. For example the standard way to write $\sin{\theta}$ is `\sin{\theta}`. However there's no hyperbolic secant built in so you could define `\DeclareMathOperator{\sech}{sech}`, which you'd call using `\sech{x}`. (Better: use the **physics** package which does some neat tricks with parentheses.)
-* `\DeclarePairedDelimiter`. Here is the evolution of my approach to absolute values:
-  1. Basic: `|x|`
-  2. Better: `\left| x \right|` is better because the absolute value bars scale to the height of the content between them.
-  3. Better: `\left\lvert x \right\rvert`. The delimiters `\lvert` and `\rvert` are preferred over the bars. But now we're writing formatting rather than meaning, so:
-  4. Better: define a macro `\newcommand{\abs}[1]{\left\lvert #1 \right \rvert}` and call `\abs{x}`
-  5. Better: there are many similar constructions involving such *paired delimiters*. The **mathtools** package provides commands to handle these automatically. For example, we can define our macro as `\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}`, which we would again call as `\abs{x}`. There are other constructions where you may want two objects inside a pair of delimiters to denote some sort of product. The **mathtools** package can do this too, such as `\DeclarePairedDelimiterX{\innerp}[2]{\langle}{\rangle}{#1,#2}` to define an inner product.  Only use this construct if you can't find a pre-defined macro in the **physics** package; see the next point.
-  6. Best: use the **physics** package, which defines several macros for common expressions involving paired delimiters. These adjust the height of the delimiters to enclose the contents automatically, so `\abs{\frac{p(x)}{q(x)}}` gives $\left\lvert \frac{p(x)}{q(x)} \right\rvert$. (Note that this is the opposite of **mathtools**: in **physics**, the starred form `\abs*{…}` turns the automatic sizing *off*.)
-* When might you actually use the paired delimiter syntax? In my case, the **physics** package does not define an inner product (except in bra–ket notation). However the example above: `\DeclarePairedDelimiterX{\innerp}[2]{\langle}{\rangle}{#1,#2}` does it nicely so that `\innerp*{\frac{p}{q}}{f}` is rendered $\left\langle \frac{p}{q},f \right\rangle$. Bonus tip: use `\langle` and `\rangle`, not `<` and `>`, for inner products.
+* `\DeclareMathOperator` (requires the **amsmath** package; note the capitalization). You'll note that functions such as sine and cosine are written in Roman characters and are defined as operators, which affects the spacing between them and their argument. For example the standard way to write $\sin{\theta}$ is `\sin{\theta}`. However there's no hyperbolic secant built in so you could define `\DeclareMathOperator{\sech}{sech}`, which you'd call using `\sech{x}`.
+* `\DeclarePairedDelimiter` (from **mathtools**). Here is how my approach to absolute values has evolved:
+  1. Basic: `|x|`. The bars don't grow to fit tall contents such as fractions, and the code says nothing about what the bars *mean*.
+  2. Better: a macro built with **mathtools**: `\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}`. Now `\abs{x}` says what you mean, and `\abs*{\frac{p(x)}{q(x)}}` (with the star) scales the bars to fit.
+  3. Also good: the **physics2** package's `\ab` command sizes any pair of delimiters automatically: `\ab|\frac{p(x)}{q(x)}|` gives $\left\lvert \frac{p(x)}{q(x)} \right\rvert$, and `\ab*|x|` turns the sizing off. To keep the meaning in your source, wrap it in a macro: `\newcommand{\abs}[1]{\ab|#1|}`.
+* The same tools handle other paired delimiters. For an inner product, either define `\DeclarePairedDelimiterX{\innerp}[2]{\langle}{\rangle}{#1,#2}` so that `\innerp*{\frac{p}{q}}{f}` gives $\left\langle \frac{p}{q},f \right\rangle$, or write `\ab<\frac{p}{q}, f>` with **physics2**. Bonus tip: use `\langle` and `\rangle`, not `<` and `>`, for inner products.
 
 ## Using packages
 
@@ -102,21 +101,29 @@ Here are the packages that are called in my template. In some cases, the order t
   * a `cases` environment
   * the `pmatrix` and `bmatrix` environments are the standard way to define matrices.
 
-* **mathtools** builds on top of the AMS packages. It provides the `\DeclarePairedDelimiter` construct I used to build the inner product macro. Another useful command: regular $\LaTeX$ renders `:=` with poor vertical alignment. **mathtools** provides `\coloneqq`, which fixes this.
+* **mathtools** builds on top of the AMS packages. It provides the `\DeclarePairedDelimiter` construct I used to build the absolute value and inner product macros. Another useful command: regular $\LaTeX$ renders `:=` with poor vertical alignment. **mathtools** provides `\coloneqq`, which fixes this.
 
-* **physics** This package requires amsmath and provides lots of things for mathematical physics and differential equations.
+* **physics2** is a modern, maintained replacement for the old **physics** package. It is split into modules, which you load after the package:
 
-  * Its commands `\dv`, `\pdv`, and `\fdv` are the best way I've seen to typeset derivatives, partial derivatives, and functional derivatives. Multiple and mixed derivatives are also handled elegantly.
+  ```latex
+  \usepackage{physics2}
+  \usephysicsmodule{ab,ab.braket,diagmat}
+  ```
 
-  * Robust and convenient macros for norms, absolute values, Poisson brackets, etc.
+  * The **ab** module provides `\ab`, which sizes a pair of delimiters automatically: `\ab(\frac{x}{2})`, `\ab[\dots]`, `\ab\{\dots\}`, `\ab|x|`, `\ab\|x\|`, and `\ab<f, g>`. Use it for function arguments too, as in `\sin\ab(\frac{x}{2})`.
+  * The **ab.braket** module provides Dirac notation: `\bra<\phi|`, `\ket|\psi>`, and `\braket<\phi|A|\psi>`.
+  * The **diagmat** and **xmat** modules make diagonal matrices and matrices with patterned entries easy to typeset.
 
-  * No missing trig functions. It also redefines the trigonometric functions so that they size their parentheses automatically, i.e., `\sin(x)` will render as $\sin{(x)}$, whereas in regular $\LaTeX$ you'd need to type `\sin{(x)}`.
+* **derivative** handles derivatives and differentials, with many options for order and style.
 
-  * The `\qqtext` macro eliminates the need for this construction to put text and space in the middle of math. For example to get 
+  * `\odv{y}{x}` gives an ordinary derivative, `\odv[order=2]{y}{x}` a second derivative, `\pdv{f}{x,y}` a mixed partial derivative, and `\fdv{F}{u}` a functional derivative.
+  * `\odif{x}` gives the upright $\mathrm{d}x$ in an integral, with the right spacing: `\int_0^1 f(x) \odif{x}`.
+
+* **Text in the middle of an equation.** To get
     $$
     a = b \quad \text{and} \quad c=d
     $$
-    we'd usually have to write `a = b \quad \text{and} \quad c=d`. But the physics package reduces this to `a = b \qqtext{and} c=d`. Even better, the package defines a handful of further macros for common words like *and* so this can be further reduced to `a = b \qqand c=d`.
+  write `a = b \quad \text{and} \quad c=d` (the `\text` command comes from **amsmath**). If you do this often, define a macro such as `\newcommand{\qand}{\quad\text{and}\quad}` and write `a = b \qand c = d`.
 
 * **natbib** is a package for working with BibTeX. In particular calling the command as 
 
@@ -148,13 +155,13 @@ If you prefer to edit locally, then set up Dropbox integration under Account $\r
 
 * This is a hard one. `$...$` and `$$...$$` are plain $\TeX$. The $\LaTeX$ equivalents are `\( \)` and `\[ \]`. Does this make a difference? I don't know, but it's [recommended as best practice](https://tex.stackexchange.com/questions/503/why-is-preferable-to) and is supposed to improve spacing before and after equations, so I'm going to try to do it from now on. You can download a python script called [dedollar](https://mjsharpe.github.io/tex-software/) that will convert this for you. 
 
-* Vectors: bold, usually lowercase. Don't use arrows. The best option is `\vb` (`\vb*` for Greek letters) from the **physics** package.
+* Vectors: bold, usually lowercase. Don't use arrows. Use `\mathbf{v}` for Latin letters, and `\bm{\xi}` from the **bm** package for Greek letters (or `\bm` for everything, if you prefer bold italic). Define a macro for each vector you use.
 
 * Matrices: Uppercase, bold.
 
-* Derivatives: Use the `\dv` command from the physics package, `\pdv` for partials and `\fdv` for functional or Fréchet derivatives.
+* Derivatives: Use the `\odv` command from the **derivative** package, `\pdv` for partials and `\fdv` for functional or Fréchet derivatives.
 
-* The $\mathrm{d}$ in an integral is typeset using the `\dd{x}` command from the **physics** package. This will automatically handle the spacing before the letter.
+* The $\mathrm{d}$ in an integral is typeset using the `\odif{x}` command from the **derivative** package. This will automatically handle the spacing before the letter.
 
 * Bibliography & References:
   * Use BibTeX. This is one area where I have especially strong opinions. Specific guidelines:
@@ -169,13 +176,13 @@ If you prefer to edit locally, then set up Dropbox integration under Account $\r
   
 * If a word appears in a subscript or superscript, it should be in Roman script. $X_{\mathrm{max}}$ not $X_{max}$, written as `$X_{\mathrm{max}}$`. Make a macro `\Xmax` and call that.
 
-* Keep yourself out of it. Try to keep the use of first person to a minimum. In very rare circumstances, using first person is the most elegant way to avoid passive voice.
+* Use "we," not "I." Mathematical writing conventionally uses "we" to bring the reader along ("we now show that…"). Prefer it to the passive voice, which tends to hide who is doing what ("it is shown that…").
 
 * Equations are part of sentences and need to be punctuated.
 
 * Don't start a sentence with a symbol. Say "The norm $\lVert x\rVert$ is finite," not "$\lVert x\rVert$ is finite."
 
-* Make minimal use of hand-formatted spacing. Try to avoid using `\`, `\,`, etc. 
+* Make minimal use of hand-formatted spacing. Try to avoid using `\ ` (backslash-space), `\,`, etc. 
 
 * Figures: 
   * If making figures in MATLAB, use my startup.m file to get better defaults, in particular thicker lines, larger text in labels, and the $\LaTeX$ interpreter in all text. Thin lines disappear, especially when projected as slides.

@@ -28,6 +28,10 @@ image:
 projects: []
 ---
 
+> [!NOTE]
+> Written in January 2021. Several of the tools below have changed since then, and the best option for MATLAB users is now [MathWorks' Phase Plane and Slope Field apps](https://github.com/MathWorks-Teaching-Resources/Phase-Plane-and-Slope-Field).
+
+
 ## The email
 
 On January 5 I sent [this post](http://lists.siam.org/pipermail/siam-dy/2021-January/000776.html) to the SIAG-DS mailing list about the old MATLAB programs dfield and pplane. I posted the same question to the Facebook group *STEM faculty blundering through remote teaching in a pandemic*. My goal was to see if I could get the programs running again to use in my undergrad ODE classes, and, in the longer term, to rewrite them from scratch. 

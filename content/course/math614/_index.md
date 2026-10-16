@@ -14,6 +14,10 @@ tags:
 
 ---
 
+> [!NOTE]
+> **Archived course page.** I taught this course in Spring 2023. Links to Canvas only work for students who were enrolled.
+
+
 ### Course Info
 Almost everything is on the [course Canvas page](https://njit.instructure.com/courses/27879).
 

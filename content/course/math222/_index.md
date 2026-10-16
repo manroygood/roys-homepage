@@ -16,6 +16,10 @@ tags:
 
 ---
 
+> [!NOTE]
+> **Archived course page.** I coordinated and taught this course between 2017 and 2022. Links to Canvas only work for students who were enrolled.
+
+
 [__Prof. Roy Goodman__](mailto:goodman@njit.edu) __Course Coordinator__
 
 ### MATLAB

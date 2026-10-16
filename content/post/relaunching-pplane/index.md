@@ -1,7 +1,7 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "Relaunching dfield & pplane"
+title: "matdfield & matpplane (2021, now superseded)"
 subtitle: ""
 summary: ""
 authors: []
@@ -29,7 +29,7 @@ projects: []
 ---
 
 {{% callout note %}}
-I'm happy to report that my work here has been rendered obsolete. Brian Hong at MathWorks has written new programs that are sleek and modern and in every way superior. They're even documented!  Download them [here](https://github.com/MathWorks-Teaching-Resources/Phase-Plane-and-Slope-Field).
+**Use these instead:** [MathWorks' Phase Plane and Slope Field apps](https://github.com/MathWorks-Teaching-Resources/Phase-Plane-and-Slope-Field). I'm happy to report that my work here has been rendered obsolete. Brian Hong at MathWorks has written new programs that are sleek, modern, documented, and in every way superior. The rest of this post describes my 2021 update of the old programs and is kept for the record.
 {{% /callout %}}
 
 I have written a new front end and made _many, many_ fixes to the old MATLAB programs **dfield** and **pplane** that make them compatible with MATLAB Release 2020b. To distinguish these new working programs, I've renamed them:
@@ -71,6 +71,6 @@ Under the hood, the program is a mess. *There is a lot I would like to fix, but 
 * A lot of code is dedicated to string manipulation. Either this was written before MATLAB added straightforward string-handling features, or else the authors didn't know about these features. To be fair, _the original programs were written before Google existed(!)_, so discovering MATLAB functionality would have involved searching in books!
 * There are a lot of calls to `eval` and `feval` which leads to hard-to-decipher codes. I have corrected this in the cases where such constructions confused the Code Analyzer.
 
-Nonetheless, there are a lot of simple cleanups that might make this more maintainable, including lots of repeated code that should be moved to separate m-files and made into functions. I will continue to maintain this code and make sure that it remains compatible with future MATLAB releases. If anyone would like to help out, or finds an error they'd like to fix, the code will be available at https://github.com/manroygood. Any other bugs you find, please let me know.
+Nonetheless, there are a lot of simple cleanups that might make this more maintainable, including lots of repeated code that should be moved to separate m-files and made into functions. I will continue to maintain this code and make sure that it remains compatible with future MATLAB releases. If anyone would like to help out, or finds an error they'd like to fix, the code is available on [GitHub](https://github.com/manroygood/matdfpp). Any other bugs you find, please let me know.
 
 **Acknowledgments**: The current codes are based on revisions by Nathanael Kazmierczak (pplane) and Giampiero Campa (dfield). I gratefully acknowledge their efforts and those of others who posted fixes to the MATLAB File Exchange. Several other people sent me partially working codes including Mac Hyman, Hil Meijer, Joceline Lega, Ross Parker, and Björn Sandstede. I got lots of help by posting questions to MATLAB Answers. These were usually answered (within minutes) by Walter Roberson, of MathWorks. Div Tiwari, also of MathWorks, provided additional useful suggestions.

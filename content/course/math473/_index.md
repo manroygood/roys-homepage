@@ -22,6 +22,10 @@ tags:
 #    name: Math 473
 #    weight: 1
 ---
+
+> [!NOTE]
+> **Archived course page.** I taught this course in Fall 2020. Links to Canvas only work for students who were enrolled.
+
 ### Course Info
 Almost everything is on the [course Canvas page](https://njit.instructure.com/courses/13893).
 

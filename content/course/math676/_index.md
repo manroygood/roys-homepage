@@ -15,6 +15,10 @@ tags:
 
 ---
 
+> [!NOTE]
+> **Archived course page.** I taught this course in Fall 2022. Links to Canvas only work for students who were enrolled.
+
+
 
 ### Course Info
 
