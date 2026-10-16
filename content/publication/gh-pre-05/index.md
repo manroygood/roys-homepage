@@ -24,7 +24,11 @@ abstract: "We consider the interactions of two identical, orthogonally polarized
 featured: false
 categories:
   - published
-publication: "*Physical Review E*"
+publication:
+  name: "Physical Review E"
+  short_name: "Phys. Rev. E"
+  volume: "71"
+  pages: "056605"
 tags:
   - Nonlinear optics
   - Solitary wave collisions

@@ -21,7 +21,12 @@ categories:
   - published
 tag:
   - Invariant manifold computation
-publication: "*Communications in Nonlinear Science and Numerical Simulation*"
+publication:
+  name: "Communications in Nonlinear Science and Numerical Simulation"
+  short_name: "Commun. Nonlinear Sci. Numer. Simul."
+  volume: "18"
+  issue: "7"
+  pages: "1734–1745"
 links:
   - name: Journal
     url: http://dx.doi.org/10.1016/j.cnsns.2012.10.017

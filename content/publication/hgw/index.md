@@ -25,7 +25,10 @@ tags:
   - sine-Gordon equation
   - Nonlinear Schrödinger equation
   - Solitary wave collisions
-publication: "*Progress in nonlinear science, Vol. 1 (Nizhny Novgorod, 2001)*"
+publication:
+  name: "Progress in Nonlinear Science, Vol. 1 (Nizhny Novgorod, 2001)"
+  short_name: "Progress in nonlinear science, Vol. 1 (Nizhny Novgorod, 2001)"
+  pages: "103–115"
 links:
   - name: Collection
     url: https://books.google.com/books/about/Progress_in_nonlinear_science.html?id=PFPvAAAAMAAJ

@@ -20,7 +20,11 @@ abstract: We study a model derived by Fei et al. [Phys. Rev. A 45 (1992) 6019]
 featured: false
 categories:
   - published
-publication: "*Physica D*"
+publication:
+  name: "Physica D: Nonlinear Phenomena"
+  short_name: "Phys. D"
+  volume: "161"
+  pages: "21–44"
 tags:
   - Solitary wave collisions
   - sine-Gordon equation

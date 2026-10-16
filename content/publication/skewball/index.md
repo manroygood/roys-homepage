@@ -26,7 +26,11 @@ abstract: We describe a simple mechanical system, a ball rolling along a
 featured: false
 categories:
   - published
-publication: "*Chaos*"
+publication:
+  name: "Chaos: An Interdisciplinary Journal of Nonlinear Science"
+  short_name: "Chaos"
+  volume: "25"
+  pages: "043109"
 tags:
   - Solitary wave collisions
 links:

@@ -9,8 +9,12 @@ doi: ""
 publishDate: 2020-11-04T18:46:43-05:00
 publication_types:
   - article-journal
-publication: Z. Angew. Math. Phys.
-publication_short: ZAMP
+publication:
+  name: "Zeitschrift für angewandte Mathematik und Physik"
+  short_name: "ZAMP"
+  volume: "71"
+  issue: "6"
+  pages: "197"
 abstract: We consider the existence of spatially localized traveling wave
   solutions of the mass-in-mass lattice. Under an anti-resonance condition first
   discovered by Kevrekidis, Stefanov and Xu, we prove that such solutions exist

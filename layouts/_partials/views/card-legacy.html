@@ -20,6 +20,7 @@
     <a href="{{ $item.RelPermalink }}"><img src="{{ $img.RelPermalink }}" alt="{{ $item.Title }}" class="mt-3 w-full h-auto" loading="lazy" /></a>
   {{ end }}
   <a href="{{ $item.RelPermalink }}" class="mt-3 block text-2xl font-bold leading-snug text-gray-900 dark:text-gray-100 hover:text-primary-700 [font-family:var(--hb-font-heading)]">{{ $item.Title }}</a>
+  {{ if eq $item.Section "publication" }}<div class="mt-1">{{ partial "pub_line" $item }}</div>{{ end }}
   {{ with $summary }}<div class="mt-2 text-gray-700 dark:text-gray-300">{{ . | plainify | htmlUnescape }}</div>{{ end }}
   {{ if $has_attachments }}
     <div class="hb-compact-links mt-3 flex flex-wrap gap-2">{{ partial "page_links" (dict "page" $item "is_list" 1) }}</div>

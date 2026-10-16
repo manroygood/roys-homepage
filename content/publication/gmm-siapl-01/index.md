@@ -19,7 +19,12 @@ abstract: Downstream development is a term encompassinga variety of effects
 featured: false
 categories:
   - published
-publication: "*SIAM Journal on Applied Mathematics*"
+publication:
+  name: "SIAM Journal on Applied Mathematics"
+  short_name: "SIAM J. Appl. Math."
+  volume: "62"
+  issue: "3"
+  pages: "746–776"
 tags:
   - GFD
 links:

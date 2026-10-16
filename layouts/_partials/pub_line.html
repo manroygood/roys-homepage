@@ -1,0 +1,25 @@
+{{/*
+  One-line citation shown between a publication's title and its summary:
+  full author list, full journal name (from front matter `publication.name`), and year.
+  Input: the publication page.
+*/}}
+{{ $p := . }}
+{{ $names := slice }}
+{{ range $p.Params.authors }}
+  {{ $prof := partial "functions/get_author_profile" (dict "slug" . "title" .) }}
+  {{ $names = $names | append $prof.title }}
+{{ end }}
+{{ $pub := partial "functions/resolve_publication.html" $p }}
+{{ $journal := $pub.name | default "" }}
+{{ if and (not $journal) (eq (printf "%T" $p.Params.publication) "string") }}{{ $journal = $p.Params.publication }}{{ end }}
+{{ $journal = strings.Trim (strings.TrimSpace $journal) "*" }}
+{{ $n := len $names }}
+<div class="hb-pub-line text-[0.95rem] font-medium text-gray-800 dark:text-gray-200">
+  {{- range $i, $name := $names -}}
+    {{- if gt $i 0 }}{{ if eq (add $i 1) $n }}{{ if gt $n 2 }},{{ end }} and {{ else }}, {{ end }}{{ end -}}
+    {{- $name -}}
+  {{- end -}}
+  {{- if $n }}. {{ end -}}
+  {{- with $journal }}<em>{{ . | $p.RenderString }}</em>, {{ end -}}
+  {{- $p.Date.Format "2006" }}.
+</div>

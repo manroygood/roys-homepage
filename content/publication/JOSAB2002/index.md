@@ -26,7 +26,11 @@ abstract: "Gap solitons are localized nonlinear coherent states that have been
 featured: false
 categories:
   - published
-publication: "*Journal of the Optical Society of America B*"
+publication:
+  name: "Journal of the Optical Society of America B"
+  short_name: "J. Opt. Soc. Am. B"
+  volume: "19"
+  pages: "1635–1632"
 tags:
   - Nonlinear optics
   - NLCME

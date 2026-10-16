@@ -24,7 +24,11 @@ abstract: We investigate nonlinear phenomena in dispersed two-phase systems
 featured: false
 categories:
   - published
-publication: "*Physica D*"
+publication:
+  name: "Physica D: Nonlinear Phenomena"
+  short_name: "Phys. D"
+  volume: "239"
+  pages: "1214–1224"
 tags:
   - Fluid Mechanics
 links:

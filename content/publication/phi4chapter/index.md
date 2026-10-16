@@ -17,7 +17,9 @@ abstract: We analyze the fractal structure seen in kink-antikink collisions of
 featured: false
 categories:
   - published
-publication: "*A Dynamical Perspective on the $\\varphi^4$ Model*"
+publication:
+  name: "A Dynamical Perspective on the $\\varphi^4$ Model, Nonlinear Systems and Complexity 26 (Springer)"
+  pages: "75–91"
 math: true
 tags:
   - Solitary wave collisions

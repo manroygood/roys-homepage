@@ -26,7 +26,11 @@ categories:
   - published
 tags:
   - Fluid mechanics
-publication: "*Journal of Fluid Mechanics*"
+publication:
+  name: "Journal of Fluid Mechanics"
+  short_name: "J. Fluid. Mech"
+  volume: "607"
+  pages: "209–234"
 links:
   - name: Journal
     url: http://journals.cambridge.org/action/displayAbstract?fromPage=online&aid=1921652&fulltextType=RA&fileId=S0022112008002036

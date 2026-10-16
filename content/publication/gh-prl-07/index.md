@@ -19,7 +19,11 @@ abstract: We present a new and complete analysis of the n-bounce resonance and
 featured: false
 categories:
   - published
-publication: "*Physical Review Letters*"
+publication:
+  name: "Physical Review Letters"
+  short_name: "Phys. Rev. Lett."
+  volume: "98"
+  pages: "104103"
 tags:
   - Solitary wave collisions
 links:

@@ -21,7 +21,12 @@ categories:
   - published
 featured: false
 math: true
-publication: "*Physical Review E*"
+publication:
+  name: "Physical Review E"
+  short_name: "Phys. Rev. E"
+  volume: "52"
+  issue: "6"
+  pages: "5904–5909"
 links:
   - name: Journal
     url: https://doi.org/10.1103/PhysRevE.52.5904

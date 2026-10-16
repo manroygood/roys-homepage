@@ -9,8 +9,11 @@ doi: ""
 publishDate: 2024-01-01T21:57:07-05:00
 publication_types:
   - article-journal
-publication: "QGLAB: A MATLAB Package for Computations on Quantum Graphs"
-publication_short: QGLAB
+publication:
+  name: "SIAM Journal on Scientific Computing"
+  volume: "47"
+  issue: "2"
+  pages: "B428–B453"
 abstract: We describe QGLAB, a new MATLAB package for analyzing partial
   differential equations on quantum graphs. The software is built on the
   existing, object-oriented MATLAB directed-graph class, inheriting its

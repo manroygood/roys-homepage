@@ -8,8 +8,11 @@ doi: 10.1137/22M1507759
 publishDate: null
 publication_types:
   - article-journal
-publication: Apodizer Design to Efficiently Couple Light into a Fiber Bragg Grating
-publication_short: ""
+publication:
+  name: "SIAM Journal on Applied Mathematics"
+  volume: "83"
+  issue: "3"
+  pages: "1126–1145"
 abstract: "We provide an optimal control framework for efficiently coupling
   light in a bare fiber into Bragg gratings with an appreciable Kerr
   nonlinearity. The light-grating interaction excites gap solitons, a type of

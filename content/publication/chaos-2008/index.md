@@ -23,7 +23,12 @@ abstract: We derive a family of singular iterated maps---closely related to
 featured: false
 categories:
   - published
-publication: "*Chaos*"
+publication:
+  name: "Chaos: An Interdisciplinary Journal of Nonlinear Science"
+  short_name: "Chaos"
+  volume: "18"
+  issue: "2"
+  pages: "023113"
 tags:
   - Solitary wave collisions
 links:

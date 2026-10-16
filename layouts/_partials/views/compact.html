@@ -7,10 +7,11 @@
 <div class="hb-compact-item flex gap-6 py-6">
   <div class="min-w-0 flex-1">
     <a href="{{ $item.RelPermalink }}" class="block text-xl font-bold leading-snug text-gray-900 dark:text-gray-100 hover:text-primary-700 dark:hover:text-primary-300 [font-family:var(--hb-font-heading)]">{{ $item.Title }}</a>
+    {{ if eq $item.Section "publication" }}<div class="mt-1">{{ partial "pub_line" $item }}</div>{{ end }}
     {{ with $summary }}
-      <div class="mt-1 text-[0.95rem] text-gray-700 dark:text-gray-300">{{ . | plainify | htmlUnescape | replaceRE `^\s*(Note|Warning)\s+` "" }}</div>
+      <div class="mt-1 text-[0.95rem] text-gray-700 dark:text-gray-300">{{ $t := . | plainify | htmlUnescape | replaceRE `^\s*(Note|Warning)\s+` "" }}{{ if not $item.Params.summary }}{{/* abstract only: shorten like the old site, never mid-formula */}}{{ $words := split $t " " }}{{ if gt (len $words) 30 }}{{ $t = printf "%s …" (replaceRE `\\\([^)]*$` "" (delimit (first 30 $words) " ")) }}{{ end }}{{ end }}{{ $t }}</div>
     {{ end }}
-    {{ if $item.Params.authors }}
+    {{ if and $item.Params.authors (ne $item.Section "publication") }}
       <div class="mt-2 text-xs text-gray-500 dark:text-gray-400">{{ partial "page_metadata_authors" $item }}</div>
     {{ end }}
     {{ if eq $item.Section "post" }}

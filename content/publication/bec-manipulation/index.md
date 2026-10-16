@@ -9,8 +9,10 @@ doi: null
 publishDate: 2022-06-08T08:43:35-04:00
 publication_types:
   - article-journal
-publication: Efficient Manipulation of Bose-Einstein Condensates in a Double-Well Potential
-publication_short: ""
+publication:
+  name: "Communications in Nonlinear Science and Numerical Simulation"
+  volume: "122"
+  pages: "107219"
 abstract: We pose the problem of transferring a Bose-Einstein Condensate (BEC)
   from one side of a double-well potential to the other as an optimal control
   problem for determining the time-dependent form of the potential. We derive a

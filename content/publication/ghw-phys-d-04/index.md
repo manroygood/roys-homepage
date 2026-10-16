@@ -27,7 +27,12 @@ abstract: "We consider the interaction of a nonlinear Schrödinger soliton with 
 featured: false
 categories:
   - published
-publication: "*Physica D*"
+publication:
+  name: "Physica D: Nonlinear Phenomena"
+  short_name: "Phys. D"
+  volume: "192"
+  issue: "3-4"
+  pages: "215–248"
 tags:
   - Nonlinear Schrödinger equation
   - Solitary wave collisions

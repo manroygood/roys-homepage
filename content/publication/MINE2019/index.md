@@ -36,7 +36,11 @@ abstract: The problem of inferring interactions from observations of individual
 featured: false
 categories:
   - published
-publication: "*Mathematics in Engineering*"
+publication:
+  name: "Mathematics in Engineering"
+  short_name: "Math. in Eng."
+  volume: "2"
+  pages: "34–54"
 tags:
   - Transfer entropy
   - Network inference

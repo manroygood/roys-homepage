@@ -20,7 +20,11 @@ abstract: We examine the dynamics of solutions to nonlinear Schrödinger/Gross--
 featured: false
 categories:
   - published
-publication: "*Journal of Physics A: Mathematical and Theoretical*"
+publication:
+  name: "Journal of Physics A: Mathematical and Theoretical"
+  short_name: "J. Phys. A: Math. Theor."
+  volume: "44"
+  pages: "425101"
 tags:
   - Bifurcation
   - Nonlinear Schrödinger equation

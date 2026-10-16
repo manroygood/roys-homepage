@@ -21,7 +21,12 @@ abstract: We describe an efficient and accurate numerical method for computing
 featured: false
 categories:
   - published
-publication: "*International Journal of  Bifurcation and Chaos*"
+publication:
+  name: "International Journal of Bifurcation and Chaos"
+  short_name: "Int. J. Bifurcat. Chaos"
+  volume: "21"
+  issue: "07"
+  pages: "2017–2042"
 tags:
   - Invariant manifold computation
 links:

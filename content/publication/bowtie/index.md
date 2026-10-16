@@ -23,7 +23,11 @@ abstract: We consider the bifurcations of standing wave solutions to the
 featured: false
 categories:
   - published
-publication: "*Discrete and Continuous Dynamical Systems A*"
+publication:
+  name: "Discrete and Continuous Dynamical Systems A"
+  short_name: "Disc. Cont. Dyn. Sys. A"
+  volume: "39"
+  pages: "2203–2232"
 tags:
   - Quantum graphs
   - Bifurcation

@@ -7,8 +7,10 @@ date: 2023-02-09T13:30:53-04:00
 publishDate: null
 publication_types:
   - article-journal
-publication: Transition to instability of the leapfrogging vortex quartet
-publication_short: ""
+publication:
+  name: "Mechanics Research Communications"
+  volume: "128"
+  pages: "104068"
 abstract: The point-vortex system is a system of longstanding interest in
   nonlinear dynamics, describing the motion of a two-dimensional inviscid fluid
   that is irrotational except at a discrete set of moving point vortices, at

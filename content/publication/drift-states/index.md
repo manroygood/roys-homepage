@@ -34,7 +34,11 @@ categories:
 tags:
   - Quantum graphs
   - Bifurcation
-publication: "*SIAM Journal on  Applied Dynamical Systems*"
+publication:
+  name: "SIAM Journal on Applied Dynamical Systems"
+  short_name: "SIAM J. Appl. Dyn. Sys."
+  volume: "18"
+  pages: "1723–1755"
 links:
   - name: Journal
     url: https://epubs.siam.org/doi/abs/10.1137/19M1246146

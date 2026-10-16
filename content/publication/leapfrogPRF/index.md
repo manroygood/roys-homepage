@@ -27,7 +27,10 @@ categories:
 tags:
   - Vortices
   - Bifurcation
-publication: " *Physical Review Fluids*"
+publication:
+  name: "Physical Review Fluids"
+  short_name: "Phys. Rev. Fluids"
+  volume: "4"
 url_pdf: ""
 links:
   - name: Journal

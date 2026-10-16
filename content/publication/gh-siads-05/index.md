@@ -30,7 +30,11 @@ categories:
 tags:
   - $\phi^4$ equation
   - Solitary wave collisions
-publication: "*SIAM Journal on Applied Dynamical Systems*"
+publication:
+  name: "SIAM Journal on Applied Dynamical Systems"
+  short_name: "SIAM J. Appl. Dyn. Sys."
+  volume: "4"
+  pages: "1195–1228"
 url_pdf: ""
 links:
   - name: Journal

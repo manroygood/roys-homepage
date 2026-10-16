@@ -18,7 +18,12 @@ abstract: "A model of soliton--defect interactions in the sine-Gordon equations
 featured: false
 categories:
   - published
-publication: "*Physica D*"
+publication:
+  name: "Physica D: Nonlinear Phenomena"
+  short_name: "Phys. D."
+  volume: "195"
+  issue: "3-4"
+  pages: "303–323"
 tags:
   - Solitary wave collisions
   - sine-Gordon equation

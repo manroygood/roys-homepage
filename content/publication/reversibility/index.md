@@ -22,7 +22,11 @@ abstract: " A dynamical system is said to be reversible if, given an output, the
 featured: false
 categories:
   - published
-publication: Phys. D
+publication:
+  name: "Physica D: Nonlinear Phenomena"
+  short_name: "Phys. D"
+  volume: "410"
+  pages: "132515"
 tags:
   - Solitary wave collisions
 links:

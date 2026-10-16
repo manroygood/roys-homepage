@@ -20,7 +20,11 @@ abstract: The nonlinear Schrödinger/Gross--Pitaevskii (NLS/GP) equation is
 featured: false
 categories:
   - published
-publication: "*Physica D*"
+publication:
+  name: "Physica D: Nonlinear Phenomena"
+  short_name: "Phys. D"
+  volume: "359"
+  pages: "39–59"
 tags:
   - Bifurcation
   - Nonlinear Schrödinger equation

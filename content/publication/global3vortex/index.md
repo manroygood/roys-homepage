@@ -8,8 +8,10 @@ doi: "10.1016/j.cnsns.2026.110428"
 publishDate: 2026-06-22T21:36:37-04:00
 publication_types:
   - preprint
-publication: Phase portraits and the bifurcation set for the three-vortex interaction system
-publication_short: ""
+publication:
+  name: "Communications in Nonlinear Science and Numerical Simulation"
+  volume: "163"
+  pages: "110428"
 abstract: "We derive a symplectic reduction of the evolution equations for a system of three interacting point vortices in the plane, first introducing Jacobi coordinates, then Lie-Poisson reductions, and finally reparameterizing the resulting leaves, arriving at an integrable system on a topologically nontrivial phase space surface. The reduced system is convenient for describing all aspects of three-vortex dynamics, including finite-time collapse, the calculation of relative equilibria and their stability, and scattering. We use the final simplified system to succinctly and geometrically explain a kind of bifurcation diagram that has appeared in the literature."
 summary: We use Jacobi coordinates and a momentum map/Lie-Poisson reduction to derive a system of equations for the three-vortex problem with no coordinate singularities and use it to classify the phase space as the three circulations vary.
 tags:

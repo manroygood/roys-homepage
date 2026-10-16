@@ -8,8 +8,12 @@ doi: ""
 publishDate: 2022-02-28T09:35:18-05:00
 publication_types:
   - article-journal
-publication: Physical Review E
-publication_short: Phys. Rev. E
+publication:
+  name: "Physical Review E"
+  short_name: "Phys. Rev. E"
+  volume: "105"
+  issue: "2"
+  pages: "025311"
 abstract: Applications of Bose-Einstein Condensates (BEC) often require that the
   condensate be prepared in a specific complex state. Optimal control is a
   reliable framework to prepare such a state while avoiding undesirable

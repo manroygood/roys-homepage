@@ -30,7 +30,12 @@ abstract: " We consider the nonlinear propagation of light in an optical fiber
 featured: false
 categories:
   - published
-publication: "*Journal of Nonlinear Science*"
+publication:
+  name: "Journal of Nonlinear Science"
+  short_name: "J. Nonlinear Science"
+  volume: "11"
+  issue: "2"
+  pages: "123–168"
 tags:
   - NLCME
   - Nonlinear optics

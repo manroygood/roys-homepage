@@ -27,7 +27,11 @@ abstract: "We study the long-time behavior of solutions to the nonlinear
 featured: false
 categories:
   - published
-publication: "*Discrete and  Continuous Dynamical Systems A*"
+publication:
+  name: "Discrete and Continuous Dynamical Systems A"
+  short_name: "Disc. Cont. Dyn. Sys. A"
+  volume: "35"
+  pages: "225–246"
 tags:
   - Nonlinear Schrödinger equation
   - bifurcation

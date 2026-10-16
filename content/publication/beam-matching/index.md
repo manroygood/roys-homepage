@@ -8,8 +8,12 @@ doi: ""
 publishDate: 2021-12-02T09:35:30-05:00
 publication_types:
   - article-journal
-publication: J. Opt. Soc. Amer. A
-publication_short: ""
+publication:
+  name: "Journal of the Optical Society of America A"
+  short_name: "J. Opt. Soc. Amer. A"
+  volume: "39"
+  issue: "5"
+  pages: "907"
 abstract: We address the problem of reshaping light in the Schrödinger optics
   regime from the perspective of optimal control theory. In technological
   applications, Schrödinger optics is often used to model a slowly-varying

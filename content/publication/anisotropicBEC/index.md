@@ -29,7 +29,10 @@ abstract: We study the motion of a vortex dipole in a Bose-Einstein condensate
 featured: false
 categories:
   - published
-publication: "*SIAM Journal on Applied Dynamical Systems*"
+publication:
+  name: "SIAM Journal on Applied Dynamical Systems"
+  short_name: "SIAM J. Appl. Dyn. Sys."
+  pages: "699–729"
 tags:
   - Vortices
 links:

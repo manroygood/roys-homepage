@@ -10,9 +10,11 @@ doi: 10.1063/5.0208538
 publishDate: 2024-06-17T21:56:21-04:00
 publication_types:
   - article-journal
-publication: A new canonical reduction of three-vortex motion and its
-  application to vortex-dipole scattering
-publication_short: A new canonical reduction of three-vortex motion
+publication:
+  name: "Physics of Fluids"
+  volume: "36"
+  issue: "6"
+  pages: "067110"
 abstract: "We introduce a new reduction of the motion of three point vortices in
   a two-dimensional ideal fluid. This proceeds in two stages: a change of
   variables to  Jacobi coordinates and then a Nambu reduction. The new

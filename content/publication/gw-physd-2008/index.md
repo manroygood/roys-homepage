@@ -38,7 +38,12 @@ categories:
 tags:
   - Bifurcation
   - NLCME
-publication: "*Physica D.*"
+publication:
+  name: "Physica D: Nonlinear Phenomena"
+  short_name: "Phys. D."
+  volume: "237"
+  issue: "21"
+  pages: "2731–2760"
 links:
   - name: Journal
     url: http://dx.doi.org/10.1016/j.physd.2008.04.009

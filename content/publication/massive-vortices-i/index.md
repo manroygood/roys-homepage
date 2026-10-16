@@ -16,8 +16,8 @@ publishDate: 2026-04-28T22:24:32+02:00
 publication_types: ["2"]
 
 # Publication name and optional abbreviated publication name.
-publication: ""
-publication_short: ""
+publication:
+  name: "arXiv preprint arXiv:2503.19222"
 
 abstract: "We perform an asymptotic analysis of massive point-vortex dynamics in Bose--Einstein condensates in the small-mass limit $\\varepsilon \\to 0$. We define two distinguished manifolds in the phase space of the dynamics. We call the first the kinematic subspace $\\mathcal{K}$, whereas the second is an almost-invariant set $\\mathcal{S}$ called a ``slow manifold.'' The orthogonal projection of the massive dynamics to $\\mathcal{K}$ yields the standard massless vortex dynamics or the Kirchhoff equations---also the 0th-order approximation to the massive equation as $\\varepsilon \\to 0$. Our first main result proves that the massive dynamics starting $O(\\varepsilon)$-close to $\\mathcal{K}$ remains $O(\\varepsilon)$-close to the massless dynamics for short times. The second main result is the derivation of a normal form for the system's Hamiltonian for the two-vortex case; it describes the coupling between motion within $\\mathcal{S}$ and that transverse to it. Specifically, we use the Lie transformation perturbation method to derive the first few terms in a formal expansion for $\\mathcal{S}$ and demonstrate numerically that fast oscillations due to the vortices' mass are suppressed, given initial conditions sufficiently close to $\\mathcal{S}$."
 

@@ -16,8 +16,8 @@ publishDate: 2024-04-02T21:56:21-04:00
 publication_types: ["3"]
 
 # Publication name and optional abbreviated publication name.
-publication: "An English Translation of Gröbli's Ph.D. Dissertation: \"Specielle Probleme über die Bewegung geradliniger paralleler Wirbelfäden\""
-publication_short: "A new phase plane for dipole-vortex scattering"
+publication:
+  name: "arXiv preprint arXiv:2404.01305"
 
 abstract: ""
 
