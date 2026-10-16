@@ -1,3 +1,3 @@
 ---
-title: "Ricardo Carretero Gónzalez"
+title: "Ricardo Carretero González"
 ---

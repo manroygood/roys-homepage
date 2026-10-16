@@ -2,9 +2,9 @@
 schema: hugoblox/author/v1
 slug: ricardo-carretero
 name:
-  display: Ricardo Carretero Gónzalez
-  given: Ricardo Carretero
-  family: Gónzalez
+  display: Ricardo Carretero González
+  given: Ricardo
+  family: Carretero González
 role: Professor
 affiliations:
 - name: San Diego State University
