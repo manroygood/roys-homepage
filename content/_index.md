@@ -65,9 +65,9 @@ sections:
       address:
         - Department of Mathematical Sciences, University Heights
         - Newark, NJ 07102
-      directions: __504A Cullimore Hall.__ If coming from Newark Penn Station, go to the Newark Light Rail, buy an Underground Fare from the machine for $0.75, validate it, and board at the far track for a train bound for Branch Brook Park or Grove Street. Get out at Warren Street/NJIT.
+      directions: __504A Cullimore Hall.__ If coming from Newark Penn Station, go to the Newark Light Rail, buy an Underground fare from the machine, validate it, and board at the far track for a train bound for Branch Brook Park or Grove Street. Get out at Warren Street/NJIT.
       office_hours:
-        - 'Tuesday/Friday 2:50-3:50'
+        - 'Tuesday/Friday 3:00–4:00'
       contact_links:
         - icon: hero/video-camera
           name: Zoom Room
