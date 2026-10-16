@@ -63,7 +63,7 @@ Good for teaching undergraduates
 
 ### Writing your own
 
-* [Matthew Mizuhara](https://owd.tcnj.edu/~mizuharm/) has a basic equivalent of dfield on his [GitHub page](https://github.com/mizuharm/Code-for-teaching)
+* [Matthew Mizuhara](https://mizuhara.pages.tcnj.edu) has a basic equivalent of dfield on his [GitHub page](https://github.com/mizuharm/Code-for-teaching)
 * [Harry Dankowicz](http://danko.mechanical.illinois.edu/index.htm) shared some codes with me. I didn't get his permission to share them, but what impressed me was that the documentation was many times longer than the codes themselves. I commented on how thoughtfully done this was and he responded, "As to documentation, this is something I place a premium on, also in my development of more sophisticated tools. I have often found that it actually helps tighten up the software implementation as well, especially when a mathematical notation and a logical flow can be developed in parallel with the encoding and both made to mirror one another." 
 * [Bjorn Sandstede](http://bjornsandstede.com) is using [Jupyter notebooks](https://github.com/sandstede-lab-teaching) for a similar purpose, with what sounds like significant technical support from Brown University.
 * Beyond heavy reliance on the Slopes app, I made extensive use of MATLAB Live Scripts this last time that I taught out of Strogatz's book. I wanted to show how, with today's tools, it is straightforward to reproduce all the classical results Strogatz discusses and introduce students to the interplay between theoretical and numerical studies that leads to insights. I ended up writing something of a [MATLAB Companion to Strogatz]({{< relref "../../course/math473/#companion-to-the-textbook " >}}).
