@@ -28,9 +28,8 @@ image:
 projects: []
 ---
 
-{{% callout note %}}
-**Use these instead:** [MathWorks' Phase Plane and Slope Field apps](https://github.com/MathWorks-Teaching-Resources/Phase-Plane-and-Slope-Field). I'm happy to report that my work here has been rendered obsolete. Brian Hong at MathWorks has written new programs that are sleek, modern, documented, and in every way superior. The rest of this post describes my 2021 update of the old programs and is kept for the record.
-{{% /callout %}}
+> [!NOTE]
+> **Use these instead:** [MathWorks' Phase Plane and Slope Field apps](https://github.com/MathWorks-Teaching-Resources/Phase-Plane-and-Slope-Field). I'm happy to report that my work here has been rendered obsolete. Brian Hong at MathWorks has written new programs that are sleek, modern, documented, and in every way superior. The rest of this post describes my 2021 update of the old programs and is kept for the record.
 
 I have written a new front end and made _many, many_ fixes to the old MATLAB programs **dfield** and **pplane** that make them compatible with MATLAB Release 2020b. To distinguish these new working programs, I've renamed them:
 

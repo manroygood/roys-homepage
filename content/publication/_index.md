@@ -17,6 +17,5 @@ header:
   image: ""
   
 ---
-{{% callout note %}}
-Quickly discover relevant papers by filtering or searching.
-{{% /callout %}}
+> [!NOTE]
+> Quickly discover relevant papers by filtering or searching.
