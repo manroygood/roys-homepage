@@ -14,9 +14,11 @@
   {{ $max := float (index $sorted 0).Count }}
   {{ $min := float (index $sorted (sub (len $sorted) 1)).Count }}
   {{ $spread := sub (math.Log $max) (math.Log $min) }}
-  <div class="flex flex-col items-center max-w-prose mx-auto gap-3 px-6">
-    {{ with $content.title }}<div class="mb-6 text-3xl font-bold text-gray-900 dark:text-white">{{ . }}</div>{{ end }}
-    <div class="flex flex-wrap justify-center items-baseline gap-x-4 gap-y-2">
+  <div class="mx-auto max-w-7xl px-4 grid grid-cols-1 lg:grid-cols-12 gap-x-8">
+    <div class="lg:col-span-4 mb-6 lg:mb-0">
+      {{ with $content.title }}<h1 class="text-5xl leading-tight text-gray-900 dark:text-white font-normal">{{ . }}</h1>{{ end }}
+    </div>
+    <div class="lg:col-span-8 flex flex-wrap items-baseline content-start gap-x-4 gap-y-2">
       {{ range sort $sorted ".Page.Title" }}
         {{ $w := 0.0 }}
         {{ if gt $spread 0 }}{{ $w = div (sub (math.Log (float .Count)) (math.Log $min)) $spread }}{{ end }}

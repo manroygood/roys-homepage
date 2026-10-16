@@ -1,0 +1,29 @@
+{{/* Contact block, ported from the old Wowchemy `contact` widget: title on the left,
+     an icon list of contact details and an OpenStreetMap map on the right. */}}
+{{ $page := .wcPage }}
+{{ $block := .wcBlock }}
+{{ $c := $block.content | default dict }}
+{{ $icon := "class=\"w-6 h-6\"" }}
+<div class="mx-auto max-w-7xl px-4 grid grid-cols-1 lg:grid-cols-12 gap-x-8">
+  <div class="lg:col-span-4 mb-6 lg:mb-0">
+    {{ with $c.title }}<h1 class="text-5xl leading-tight text-gray-900 dark:text-white font-normal">{{ . }}</h1>{{ end }}
+    {{ with $c.subtitle }}<p class="mt-2 text-lg text-gray-600 dark:text-gray-300">{{ . | markdownify }}</p>{{ end }}
+  </div>
+  <div class="lg:col-span-8">
+    {{ with $c.text }}<div class="prose max-w-none dark:prose-invert mb-4">{{ . | $page.RenderString }}</div>{{ end }}
+    <ul class="space-y-3 text-lg text-gray-800 dark:text-gray-200 [&_a]:text-primary-700 dark:[&_a]:text-primary-300 [&_a:hover]:underline">
+      {{ with $c.email }}<li class="flex gap-4"><span class="shrink-0">{{ partial "functions/get_icon" (dict "name" "hero/envelope" "attributes" $icon) }}</span><a href="mailto:{{ . }}">{{ . }}</a></li>{{ end }}
+      {{ with $c.phone }}<li class="flex gap-4"><span class="shrink-0">{{ partial "functions/get_icon" (dict "name" "hero/phone" "attributes" $icon) }}</span><a href="tel:{{ replace . " " "" }}">{{ . }}</a></li>{{ end }}
+      {{ with $c.address }}<li class="flex gap-4"><span class="shrink-0">{{ partial "functions/get_icon" (dict "name" "hero/map-pin" "attributes" $icon) }}</span><span>{{ delimit . ", " }}</span></li>{{ end }}
+      {{ with $c.directions }}<li class="flex gap-4"><span class="shrink-0">{{ partial "functions/get_icon" (dict "name" "hero/map" "attributes" $icon) }}</span><span>{{ . | markdownify }}</span></li>{{ end }}
+      {{ with $c.office_hours }}<li class="flex gap-4"><span class="shrink-0">{{ partial "functions/get_icon" (dict "name" "hero/clock" "attributes" $icon) }}</span><span>{{ delimit . "<br>" | safeHTML }}</span></li>{{ end }}
+      {{ range $c.contact_links }}<li class="flex gap-4"><span class="shrink-0">{{ partial "functions/get_icon" (dict "name" (.icon | default "hero/link") "attributes" $icon) }}</span><a href="{{ .link }}" target="_blank" rel="noopener">{{ .name }}</a></li>{{ end }}
+    </ul>
+    {{ with $c.coordinates }}
+      {{ $lat := float .latitude }}{{ $lon := float .longitude }}
+      {{ $d := 0.006 }}
+      <iframe class="mt-6 w-full h-[400px] border-0" loading="lazy" title="Map"
+        src="https://www.openstreetmap.org/export/embed.html?bbox={{ sub $lon $d }}%2C{{ sub $lat $d }}%2C{{ add $lon $d }}%2C{{ add $lat $d }}&amp;layer=mapnik&amp;marker={{ $lat }}%2C{{ $lon }}"></iframe>
+    {{ end }}
+  </div>
+</div>

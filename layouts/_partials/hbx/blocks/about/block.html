@@ -1,0 +1,72 @@
+{{/*
+  About block, ported from the old Wowchemy `about` widget:
+  avatar, name and links on the left; bio, interests and education on the right.
+  Reads the profile from data/authors/<username>.yaml.
+*/}}
+{{ $page := .wcPage }}
+{{ $block := .wcBlock }}
+{{ $content := $block.content | default dict }}
+{{ $slug := $content.username | default "admin" }}
+{{ $profile := partial "functions/get_author_profile" (dict "slug" $slug) }}
+{{ $data := index (partialCached "functions/get_authors_data" . site.Language.Lang) $slug | default dict }}
+
+<div class="mx-auto max-w-6xl px-6 grid grid-cols-1 md:grid-cols-12 gap-x-10 gap-y-8">
+  <div class="md:col-span-4 flex flex-col items-center text-center">
+    {{ with $profile.avatar }}
+      {{ $img := . }}
+      {{ if reflect.IsImageResourceProcessable . }}{{ $img = .Fill "540x540 Center webp" }}{{ end }}
+      <img class="w-[270px] h-[270px] rounded-full object-cover mb-4" src="{{ $img.RelPermalink }}" width="270" height="270" alt="{{ $profile.title }}" />
+    {{ end }}
+    <h2 class="font-heading text-4xl text-gray-900 dark:text-white mb-2">{{ $profile.title }}</h2>
+    {{ with $profile.role }}<div class="text-lg text-gray-500 dark:text-gray-400 leading-snug [&_a]:text-primary-700 dark:[&_a]:text-primary-300">{{ . | markdownify }}</div>{{ end }}
+    {{ range $profile.affiliations }}
+      <div class="mt-3 text-lg leading-snug">
+        {{ with .url }}<a class="text-primary-700 dark:text-primary-300 hover:underline" href="{{ . }}" target="_blank" rel="noopener">{{ end }}{{ .name }}{{ if .url }}</a>{{ end }}
+      </div>
+    {{ end }}
+    {{ with $profile.links }}
+      <ul class="flex flex-wrap justify-center gap-x-3 gap-y-2 mt-5 text-primary-700 dark:text-primary-300">
+        {{ range . }}
+          {{ $url := .url }}
+          {{ $ext := in (slice "http" "https") (urls.Parse $url).Scheme }}
+          {{ if not (urls.Parse $url).Scheme }}{{ $url = $url | relLangURL }}{{ end }}
+          <li><a href="{{ $url | safeURL }}" {{ if $ext }}target="_blank" rel="me noopener"{{ end }} aria-label="{{ path.Base .icon }}" class="block hover:opacity-70">
+            {{ partial "functions/get_icon" (dict "name" .icon "attributes" "class=\"w-8 h-8\"") }}
+          </a></li>
+        {{ end }}
+      </ul>
+    {{ end }}
+  </div>
+
+  <div class="md:col-span-8">
+    {{ with $profile.bio }}
+      <div class="prose prose-lg max-w-none dark:prose-invert prose-a:text-primary-700 prose-a:no-underline hover:prose-a:underline">{{ . | $page.RenderString }}</div>
+    {{ end }}
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-8">
+      {{ with $data.interests }}
+        <div>
+          <h3 class="font-heading text-2xl mb-3 text-gray-900 dark:text-white">{{ i18n "interests" | default "Interests" }}</h3>
+          <ul class="list-disc pl-6 space-y-1 text-gray-700 dark:text-gray-300">
+            {{ range . }}<li>{{ . | markdownify }}</li>{{ end }}
+          </ul>
+        </div>
+      {{ end }}
+      {{ with $data.education }}
+        <div>
+          <h3 class="font-heading text-2xl mb-3 text-gray-900 dark:text-white">{{ i18n "education" | default "Education" }}</h3>
+          <ul class="space-y-3">
+            {{ range . }}
+              <li class="flex gap-3">
+                <span class="mt-0.5 shrink-0 text-gray-700 dark:text-gray-300">{{ partial "functions/get_icon" (dict "name" "hero/academic-cap" "attributes" "class=\"w-6 h-6\"") }}</span>
+                <div>
+                  <div class="text-gray-800 dark:text-gray-200">{{ .degree }}{{ with .end }}, {{ (time .).Year }}{{ end }}</div>
+                  <div class="text-sm text-gray-500 dark:text-gray-400">{{ .institution }}</div>
+                </div>
+              </li>
+            {{ end }}
+          </ul>
+        </div>
+      {{ end }}
+    </div>
+  </div>
+</div>

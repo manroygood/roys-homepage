@@ -35,6 +35,8 @@ build:
   writeStats: true
 enableGitInfo: false
 summaryLength: 30
+# Keep taxonomy terms as written (e.g. 'Fluid mechanics'), like the old site
+capitalizeListTitles: false
 pagination:
   pagerSize: 10
 enableEmoji: true

@@ -61,7 +61,7 @@ hugoblox:
   # ────────────────────────────────────────────────────────────────────────────
   typography:
     # Theme pack: name from data/fonts/
-    pack: "academic"
+    pack: "minimal" # data/fonts/minimal.yaml
 
   # ────────────────────────────────────────────────────────────────────────────
   # LAYOUT
@@ -83,6 +83,8 @@ hugoblox:
     enable: true
     # Header style variant
     style: navbar # navbar | navbar-simple | minimal
+    # Old site showed only the NJIT logo, no site name
+    show_title: false
     # Stick to top on scroll
     sticky: true
     # Menu alignment

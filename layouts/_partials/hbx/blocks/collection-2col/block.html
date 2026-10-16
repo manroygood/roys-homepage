@@ -1,0 +1,17 @@
+{{/*
+  Old Wowchemy section layout: the section title (and subtitle) sit in a left column,
+  the list on the right. Renders the stock `collection` block for the list itself.
+*/}}
+{{ $page := .wcPage }}
+{{ $block := .wcBlock }}
+{{ $content := $block.content | default dict }}
+<div class="mx-auto max-w-7xl px-4 grid grid-cols-1 lg:grid-cols-12 gap-x-8">
+  <div class="lg:col-span-4 mb-6 lg:mb-0">
+    {{ with $content.title }}<h1 class="text-5xl leading-tight text-gray-900 dark:text-white [font-family:var(--hb-font-heading)] font-normal">{{ . | emojify | $page.RenderString }}</h1>{{ end }}
+    {{ with $content.subtitle }}<div class="mt-2 text-lg text-gray-600 dark:text-gray-300 [&_a]:text-primary-700 dark:[&_a]:text-primary-300">{{ . | $page.RenderString }}</div>{{ end }}
+  </div>
+  <div class="lg:col-span-8 [&>div]:!px-0 [&>div]:!items-stretch">
+    {{ $inner := merge $block (dict "content" (merge $content (dict "title" "" "subtitle" "" "text" ""))) }}
+    {{ partial "hbx/blocks/content-collection/block.html" (dict "wcPage" $page "wcBlock" $inner "wcIdentifier" .wcIdentifier) }}
+  </div>
+</div>
