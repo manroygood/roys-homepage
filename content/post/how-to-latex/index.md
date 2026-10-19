@@ -146,14 +146,6 @@ Here are the packages that are called in my template. In some cases, the order t
 
 Some reasons to have a style guide are for consistency and to conform to professional conventions. On top of that, poor style can be distracting to the reader. I learned a bunch of things while preparing this document, so this style guide represents how I intend to use $\LaTeX$ in the future, rather than how I have always used it. 
 
-### Overleaf
-
-Do not email documents back and forth. Do not create a sequence of documents named `document1.tex`, `document2.tex`, etc. This can only lead to mistakes. Online tools such as [Overleaf](https://overleaf.com) handle shared documents much more elegantly. 
-
-If you prefer to edit locally, then set up Dropbox integration under Account $\rightarrow$ Account settings on Overleaf. Edit on your personal device. Syncing isn't instantaneous, but it prevents versioning hell. Sadly, this requires a premium or institutional Overleaf account.
-
-### Guidelines
-
 * This is a hard one. `$...$` and `$$...$$` are plain $\TeX$. The $\LaTeX$ equivalents are `\( \)` and `\[ \]`. Does this make a difference? I don't know, but it's [recommended as best practice](https://tex.stackexchange.com/questions/503/why-is-preferable-to) and is supposed to improve spacing before and after equations, so I'm going to try to do it from now on. You can download a python script called [dedollar](https://mjsharpe.github.io/tex-software/) that will convert this for you. 
 
 * Vectors: bold, usually lowercase. Don't use arrows. Use `\mathbf{v}` for Latin letters, and `\bm{\xi}` from the **bm** package for Greek letters (or `\bm` for everything, if you prefer bold italic). Define a macro for each vector you use.
@@ -218,6 +210,12 @@ If you prefer to edit locally, then set up Dropbox integration under Account $\r
 * In TeXShop on a Mac, under help, click on "Show help on package" and enter the name of a package to read more about it.
 * If you are running $\LaTeX$ on a Mac, you most likely have a program installed called *TeX Live Utility*. It has three tabs. The first allows you to keep your $\TeX$ installation up to date. It usually takes a minute to load while it checks for all the updates. The second tab "Packages" contains a list of all the installed packages. You can search for useful installed packages. For example, search for "Exam" and you'll find the Exam package, which is the right way to write an exam. (I have never clicked on the third tab "Backups")
 * Google "How do I ... in LaTeX?" This will usually take you to a discussion on the [TeX StackExchange](https://tex.stackexchange.com/). Somebody has already asked the thing you want to know.
+
+## Overleaf
+
+Do not email documents back and forth. Do not create a sequence of documents named `document1.tex`, `document2.tex`, etc. This can only lead to mistakes. Online tools such as [Overleaf](https://overleaf.com) handle shared documents much more elegantly. 
+
+If you prefer to edit locally, then set up Dropbox integration under Account $\rightarrow$ Account settings on Overleaf. Edit on your personal device. Syncing isn't instantaneous, but it prevents versioning hell. Sadly, this requires a premium or institutional Overleaf account.
 
 ## My template and abbreviations files
 
