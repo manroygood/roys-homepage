@@ -1,9 +1,9 @@
 #!/usr/bin/env ruby
 # Add a paper to the homepage and the CV, or update a preprint once it is published.
 #
-#   ruby scripts/paper.rb add 2503.19222 [--slug NAME] [--pdf FILE] [--no-pdf] [--no-cv]
-#   ruby scripts/paper.rb add 10.1137/23M1627729 [--arxiv ID] [--slug NAME] [--pdf FILE] [--no-cv]
-#   ruby scripts/paper.rb publish SLUG 10.1137/23M1627729 [--pdf FILE] [--no-cv]
+#   ruby scripts/paper.rb add 2503.19222 --image FIGURE.png [--slug NAME] [--pdf FILE] [--no-pdf] [--no-cv]
+#   ruby scripts/paper.rb add 10.1137/23M1627729 --image FIGURE.png [--arxiv ID] [--slug NAME] [--pdf FILE] [--no-cv]
+#   ruby scripts/paper.rb publish SLUG 10.1137/23M1627729 [--pdf FILE] [--image FILE] [--no-cv]
 #   ruby scripts/paper.rb cv
 #
 # `add` with an arXiv ID makes a preprint: content/publication/SLUG/{index.md,cite.bib,SLUG.pdf}
@@ -300,7 +300,26 @@ def add_pdf(dir, slug, opts, arxiv)
   puts "Saved #{dest.delete_prefix(ROOT + "/")}"
 end
 
+IMAGE_TYPES = %w[.png .jpg .jpeg .gif .webp].freeze
+
+def check_image(opts, required:)
+  return die("add needs --image FILE: every paper gets a featured image") if required && !opts[:image]
+  return unless opts[:image]
+  die("no image at #{opts[:image]}") unless File.file?(opts[:image])
+  die("--image must be one of #{IMAGE_TYPES.join(" ")}") unless IMAGE_TYPES.include?(File.extname(opts[:image]).downcase)
+end
+
+# Copy the figure to featured.<ext>, replacing any featured image already there.
+def add_image(dir, opts)
+  return unless opts[:image]
+  Dir[File.join(dir, "featured.*")].each { File.delete(_1) }
+  dest = File.join(dir, "featured#{File.extname(opts[:image]).downcase.sub(".jpeg", ".jpg")}")
+  FileUtils.cp(opts[:image], dest)
+  puts "Saved #{dest.delete_prefix(ROOT + "/")}"
+end
+
 def cmd_add(id, opts)
+  check_image(opts, required: true)
   doi = id.match?(%r{\A10\.\d+/}) ? id : nil
   arxiv = doi ? nil : id.sub(%r{\A(https?://arxiv\.org/abs/|arXiv:)}i, "").sub(/v\d+\z/, "")
   meta = doi ? crossref_meta(doi) : arxiv_meta(arxiv)
@@ -320,6 +339,7 @@ def cmd_add(id, opts)
   File.write(File.join(dir, "index.md"), front_matter(meta, page_authors, published: !!doi))
   File.write(File.join(dir, "cite.bib"), doi ? crossref_bibtex(doi, slug) : arxiv_bibtex(meta, slug))
   add_pdf(dir, slug, opts, arxiv)
+  add_image(dir, opts)
   puts "Created content/publication/#{slug}/"
   puts "arXiv also lists DOI #{meta[:doi]}; run `publish #{slug} #{meta[:doi]}` if it is the journal version." if arxiv && meta[:doi]
 
@@ -331,6 +351,7 @@ end
 def cmd_publish(slug, doi, opts)
   path = File.join(PUB_DIR, slug, "index.md")
   die("no page at #{path}") unless File.exist?(path)
+  check_image(opts, required: false)
   meta = crossref_meta(doi)
   fm, body = split_page(path)
   puts "#{meta[:title]}\n  in #{meta[:journal]} #{meta[:volume]}, #{meta[:pages]} (#{meta[:date]})\nAuthors:"
@@ -352,6 +373,7 @@ def cmd_publish(slug, doi, opts)
     add_pdf(File.join(PUB_DIR, slug), slug, opts, nil)
     puts "Other PDFs in the folder, check which should stay: #{old.map { File.basename(_1) }.join(", ")}" if old.size > 1
   end
+  add_image(File.join(PUB_DIR, slug), opts)
   puts "Updated content/publication/#{slug}/ to the published version"
 
   return if opts[:no_cv]
@@ -363,6 +385,7 @@ opts = {}
 parser = OptionParser.new do |o|
   o.banner = "usage: paper.rb add ARXIV_ID|DOI [options] | publish SLUG DOI [options] | cv"
   o.on("--slug NAME", "folder name under content/publication") { opts[:slug] = _1 }
+  o.on("--image FILE", "featured image (required for add): .png, .jpg, .gif or .webp") { opts[:image] = File.expand_path(_1) }
   o.on("--pdf FILE", "use this PDF instead of downloading from arXiv") { opts[:pdf] = File.expand_path(_1) }
   o.on("--arxiv ID", "with add DOI: also link this arXiv preprint (and use its abstract)") { opts[:arxiv] = _1 }
   o.on("--no-pdf", "don't download the arXiv PDF") { opts[:no_pdf] = true }
