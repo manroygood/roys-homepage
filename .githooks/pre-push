@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Refuse to push a site that would fail to build on Netlify.
+exec "$(git rev-parse --show-toplevel)/scripts/check-build.sh"

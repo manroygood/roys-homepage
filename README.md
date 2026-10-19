@@ -21,6 +21,15 @@ hugo server          # preview at http://localhost:1313
 Netlify builds the site from `main` using `netlify.toml` (Hugo 0.168.0, then Pagefind for search).
 Pushing to `main` deploys it.
 
+Before every push, a git hook runs `scripts/check-build.sh`, which builds the site and refuses the push
+if Hugo reports any error, so a broken page never reaches Netlify. Turn the hook on once per clone:
+
+```bash
+git config core.hooksPath .githooks
+```
+
+`git push --no-verify` skips the check.
+
 ## Layout of the content
 
 | Folder | What it holds |

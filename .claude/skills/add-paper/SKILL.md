@@ -32,7 +32,7 @@ What the script does:
    - The CV line it printed. CV titles are in sentence case (capitalize only the first word, the first word after a colon, proper nouns such as Bose--Einstein or Schrödinger, and acronyms such as NLS or MATLAB), so convert the arXiv title in `scholarly.ltx`; also check initials and the ISO 4 journal abbreviation. Leave the website page's title as published. After a `publish`, move the line if it is no longer in date order. Then run `ruby scripts/paper.rb cv`.
    - `publish`: Crossref titles can differ in capitalization from arXiv; the page keeps the arXiv abstract and Roy's custom body text.
 4. Fill in what the metadata can't: `tags` (reuse tags from similar papers, `grep -h -A3 '^tags' content/publication/*/index.md`), `featured`, `summary`, and `url_code`. Ask Roy rather than invent.
-5. Check the page: `hugo server` and open `/publication/SLUG/` and `/papers/`.
+5. Run `scripts/check-build.sh` and fix anything it reports (it fails on any Hugo ERROR, as Netlify would). Then check the page: `hugo server` and open `/publication/SLUG/` and `/papers/`.
 6. Show Roy `git diff --stat` and commit on the current branch (page folder plus `static/files/CVgoodman.pdf`). Also commit the CV change in `~/Documents/Employment/CV` (its own git repository, no remote). Push the homepage only when Roy asks.
 
 Notes:
