@@ -3,7 +3,7 @@ title: A Mechanical Analog of the Two-Bounce Resonance
 linktitle: 2010 Project
 toc: true
 type: docs
-date: "2020-1-27"
+date: "2020-01-27"
 draft: false
 
 # Prev/next pager order (if `docs_section_pager` enabled in `params.toml`)
