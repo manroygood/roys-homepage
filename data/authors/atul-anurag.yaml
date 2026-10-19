@@ -5,16 +5,16 @@ name:
   display: Atul Anurag (अतुल अनुराग)
   given: Atul
   family: Anurag
-role: Visiting Assistant Professor, [Ramapo College of New Jersey](https://www.ramapo.edu)
+role: "[Lander University](https://www.lander.edu)"
 bio: Atul continues to work with Prof. Goodman on point vortex dynamics.
 affiliations:
-- name: Ramapo College of New Jersey
-  url: https://www.ramapo.edu
+- name: Lander University
+  url: https://www.lander.edu
 links:
 - icon: hero/globe-americas
   url: http://atulanurag.com
 - icon: hero/envelope
-  url: mailto:aa2894@njit.edu
+  url: mailto:aanurag@lander.edu
 - icon: hero/book-open
   url: https://digitalcommons.njit.edu/dissertations/1851/
 interests:
