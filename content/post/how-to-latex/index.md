@@ -100,6 +100,11 @@ Here are the packages that are called in my template. In some cases, the order t
   * `\DeclareMathOperator` as described above
   * a `cases` environment
   * the `pmatrix` and `bmatrix` environments are the standard way to define matrices.
+  * the `\text` command for text in the middle of an equation. To get
+    $$
+    a = b \quad \text{and} \quad c=d
+    $$
+    write `a = b \quad \text{and} \quad c=d`. If you do this often, define a macro such as `\newcommand{\qand}{\quad\text{and}\quad}` and write `a = b \qand c = d`.
 
 * **mathtools** builds on top of the AMS packages. It provides the `\DeclarePairedDelimiter` construct I used to build the absolute value and inner product macros. Another useful command: regular $\LaTeX$ renders `:=` with poor vertical alignment. **mathtools** provides `\coloneqq`, which fixes this.
 
@@ -120,12 +125,6 @@ Here are the packages that are called in my template. In some cases, the order t
 
   * `\odv{y}{x}` gives an ordinary derivative, `\odv[order=2]{y}{x}` a second derivative, `\pdv{f}{x,y}` a mixed partial derivative, and `\fdv{F}{u}` a functional derivative.
   * `\odif{x}` gives the upright $\mathrm{d}x$ in an integral, with the right spacing: `\int_0^1 f(x) \odif{x}`.
-
-* **Text in the middle of an equation.** To get
-    $$
-    a = b \quad \text{and} \quad c=d
-    $$
-  write `a = b \quad \text{and} \quad c=d` (the `\text` command comes from **amsmath**). If you do this often, define a macro such as `\newcommand{\qand}{\quad\text{and}\quad}` and write `a = b \qand c = d`.
 
 * **natbib** is a package for working with BibTeX. In particular calling the command as 
 
