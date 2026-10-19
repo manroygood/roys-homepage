@@ -21,7 +21,7 @@ What the script does:
 - Writes `content/publication/SLUG/index.md` and `cite.bib`, and saves the arXiv PDF as `SLUG.pdf` (the page's PDF button).
 - Preprints get `publication_types: [article]` (shown as "Preprint") and `publication.name: "arXiv preprint arXiv:ID"`; published papers get `article-journal`, the journal name/short name/volume/issue/pages from Crossref, a "Journal" link to the DOI, and Crossref's BibTeX.
 - Matches authors to `data/authors/*.yaml` by family name and first initial (Roy is `admin`); unmatched authors are listed by full name.
-- Adds a `\paper{YEAR}{Authors, \emph{Title}, submitted.}` line at the top of "Refereed Journal Papers" in `~/Documents/Employment/CV/scholarly.ltx`; `publish` finds that line by title and replaces "submitted" with `Short J., vol, pages.` It backs up to `scholarly.ltx.bak`, rebuilds with latexmk, and copies `CVgoodman.pdf` to `static/files/`.
+- Adds a `\paper{YEAR}{Authors, \emph{Title}, submitted.}` line at the top of "Refereed Journal Papers" in `~/Documents/Employment/CV/scholarly.ltx`; `publish` finds that line by title and replaces "submitted" with `Short J. \textbf{vol}, pages.` It backs up to `scholarly.ltx.bak`, rebuilds with latexmk, and copies `CVgoodman.pdf` to `static/files/`.
 
 ## Steps
 

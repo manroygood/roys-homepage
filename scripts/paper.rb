@@ -247,7 +247,10 @@ def cv_add_preprint(meta, cv_names)
 end
 
 def cv_publish(meta, cv_names)
-  venue = [meta[:short_journal].to_s.empty? ? meta[:journal] : meta[:short_journal], meta[:volume], meta[:pages]&.tr("–", "-")&.sub("-", "--")].compact.join(", ")
+  # Same shape as the rest of the CV: "Phys. Rev. E \textbf{105}, 025311".
+  journal = meta[:short_journal].to_s.empty? ? meta[:journal] : meta[:short_journal]
+  journal += " \\textbf{#{meta[:volume]}}" if meta[:volume]
+  venue = [journal, meta[:pages]&.tr("–", "-")&.sub("-", "--")].compact.join(", ")
   edit_cv do |text|
     lines = text.lines
     i = lines.index { |l| l.include?("\\paper") && norm_title(l).include?(norm_title(meta[:title])) }
