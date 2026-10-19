@@ -1,248 +1,99 @@
-# [The Academic CV That Gets You Hired](https://github.com/HugoBlox/hugo-theme-academic-cv)
+# Roy Goodman's homepage
 
-[![Screenshot](.github/preview.webp)](https://hugoblox.com/templates/academic-cv?utm_source=github&utm_medium=readme&utm_content=preview)
+Source for [roygoodman.net](https://roygoodman.net), the academic homepage of Roy Goodman
+(Department of Mathematical Sciences, New Jersey Institute of Technology): research,
+publications, talks, teaching, students and CV.
 
-<!-- TODO: Replace with a short demo video showing Hugo Chat generating an academic profile page -->
-<!-- https://github.com/user-attachments/assets/REPLACE_ME -->
+The site is built with [Hugo](https://gohugo.io) on the [HugoBlox](https://github.com/HugoBlox/kit)
+Academic CV template (Tailwind CSS). It replaces the older Wowchemy/Bootstrap site in
+[manroygood/roy-goodman](https://github.com/manroygood/roy-goodman), and was migrated in
+October 2026 to look as much like that site as possible.
 
-<h1 align="center">The Portfolio That Works While You Sleep</h1>
+## Building and deploying
 
-<p align="center">
-  <strong>Your unfair advantage in academia.</strong><br/>
-  Stop sending PDFs into the void. Build a living portfolio that boosts citations, attracts collaborators, and lands offers — all from simple Markdown files you own.<br/>
-  Built on <a href="https://github.com/HugoBlox/kit">HugoBlox</a> — the open-source framework where AI generates your pages and you own everything as Markdown.
-</p>
-
-<p align="center">
-  <a href="https://hugoblox.com/templates/academic-cv?utm_source=github&utm_medium=readme&utm_content=cta_top"><b>Deploy Free (60s)</b></a>
-  &nbsp;&nbsp;|&nbsp;&nbsp;
-  <a href="https://hugo.chat/?utm_source=github&utm_medium=readme&utm_content=cta_top_academic-cv"><b>Customize with AI</b></a>
-  &nbsp;&nbsp;|&nbsp;&nbsp;
-  <a href="https://hugoblox.com/templates/academic-cv?utm_source=github&utm_medium=readme&utm_content=demo">Live Demo</a>
-</p>
-
-<div align="center">
-
-  <a href="https://github.com/HugoBlox/hugo-theme-academic-cv">
-    <img src="https://img.shields.io/github/stars/HugoBlox/hugo-theme-academic-cv?label=Star&logo=github&style=flat-square&color=181717" alt="GitHub Stars">
-  </a>
-  <a href="https://discord.gg/z8wNYzb">
-    <img src="https://img.shields.io/discord/722225264733716590?label=Discord&logo=discord&logoColor=white&style=flat-square&color=5865F2" alt="Discord">
-  </a>
-  <a href="https://github.com/HugoBlox/kit">
-    <img src="https://img.shields.io/github/stars/HugoBlox/kit?label=HugoBlox&logo=github&style=flat-square&color=181717" alt="HugoBlox Stars">
-  </a>
-
-</div>
-
-<p align="center">
-  <sub>Part of the <a href="https://github.com/HugoBlox/kit"><strong>HugoBlox</strong></a> ecosystem · Trusted by <strong>150,000+</strong> researchers at <strong>MIT, Stanford, Google & NVIDIA</strong> · Rated <strong>4.9/5</strong> (official survey) · Since <strong>2016</strong></sub>
-</p>
-
----
-
-## Why This Template?
-
-Most academic CVs are static PDFs that get lost in the pile. This is an **always-on portfolio** that works 24/7 to advance your career:
-
-- **Students & grads** applying to top labs and industry roles — stand out with a living portfolio, not a flat PDF
-- **Researchers** who want a citable online presence with publications, projects, and talks in one place
-- **Faculty & PIs** showcasing their lab, group news, and team members
-- **Anyone with publications** who wants auto-imported citations from BibTeX/DOI without manual formatting
-
-> *"My citations went up 3x after switching to this template. Colleagues started finding my work through Google Scholar links back to my site. The BibTeX auto-sync is a lifesaver."*
-> — **Dr. Li Zhang**, AI Research Scientist
-
-> *"I set this up during a weekend and my PhD students had their profiles live by Monday. They just edit Markdown — no tickets to IT, no WordPress logins."*
-> — **Prof. Sarah Chen**, Computer Science, ETH Zürich
-
-<p align="center">
-  <a href="https://hugoblox.com/templates/academic-cv?utm_source=github&utm_medium=readme&utm_content=cta_mid">
-    <img src="https://img.shields.io/badge/⚡️%20Deploy%20Your%20CV%20in%2060s-7c3aed?style=for-the-badge" alt="Deploy this template" width="400">
-  </a>
-</p>
-
----
-
-## Features
-
-| Feature | Benefit |
-| :--- | :--- |
-| **BibTeX / DOI auto-import** | Drop in a `.bib` file — publication pages generated automatically with proper citations. |
-| **Jupyter & RMarkdown** | Publish `.ipynb` notebooks as beautiful posts — code, outputs, and narrative intact. |
-| **LaTeX math** | Native rendering for equations and technical writing. |
-| **Markdown slides** | Present with reveal.js — math, syntax highlighting, diagrams, speaker notes. |
-| **SEO & AI-ready** | Optimized for search engines and LLMs — your work gets found, cited, and recommended. |
-| **AI page generation** | Describe what you need to [Hugo Chat](https://hugo.chat/?utm_source=github&utm_medium=readme&utm_content=features_academic-cv) — get structured pages with correct front matter instantly. |
-| **Visual editor** | Drag-and-drop blocks in VS Code with [Ownable CMS](https://marketplace.visualstudio.com/items?itemName=ownable.ownable). No coding needed. |
-| **Plain Markdown** | Every file is human-readable. No database, no lock-in, take your content anywhere. |
-| **Free hosting** | Deploy to GitHub Pages, Netlify, Vercel, or Cloudflare — all free tier. |
-
----
-
-## 🚀 Get Started
-
-### Step 1: Deploy Your Site
-
-**Option A: Launch in browser** (fastest — no install needed)
-
-> [!TIP]
-> Deploy a live site in 60 seconds — no software to install:
-> [**Deploy Academic CV free**](https://hugoblox.com/templates/academic-cv?utm_source=github&utm_medium=readme&utm_content=get_started)
-
-**Option B: Use the CLI**
+Requirements: Hugo extended **0.167 or newer** (0.162.0 has a bug that breaks this site), Node, and pnpm.
 
 ```bash
-# Requires Hugo Extended & Node.js
-npx hugoblox create site --template academic-cv
+pnpm install
+hugo server          # preview at http://localhost:1313
 ```
 
-### Step 2: Customize With AI + Visual Editing
+Netlify builds the site from `main` using `netlify.toml` (Hugo 0.168.0, then Pagefind for search).
+Pushing to `main` deploys it.
 
-<table>
-<tr>
-<td width="50%">
+## Layout of the content
 
-**✨ Hugo Chat** — AI customization
+| Folder | What it holds |
+|---|---|
+| `content/publication/` | One folder per paper: `index.md`, `cite.bib`, the PDF and `featured.*` |
+| `content/event/` | Talks |
+| `content/post/` | Blog posts |
+| `content/course/` | Course pages, including archived ones |
+| `content/papers.md`, `teaching.md`, `students.md`, `other.md` | Landing pages built from blocks |
+| `data/authors/*.yaml` | Profiles for Roy (`admin`) and co-authors and students |
+| `static/files/CVgoodman.pdf` | The CV, built from LaTeX elsewhere (see below) |
 
-Tell Hugo Chat what you want in plain English. It generates structured pages with the right front matter, shortcodes, and blocks for this template.
+The folder names (`publication`, `event`, `post`, `course`) and slugs match the old site, so its URLs keep working.
 
-> *"Add a publications page with my 2024 papers from this BibTeX file"*
+## Adding a paper
 
-[**Try Hugo Chat — free**](https://hugo.chat/?utm_source=github&utm_medium=readme&utm_content=step2_academic-cv)
+`scripts/paper.rb` (plain Ruby, no gems) creates a publication page and the CV entry from an arXiv ID or DOI:
 
-</td>
-<td width="50%">
+```bash
+ruby scripts/paper.rb add 2503.19222 --image figure.png --slug my-paper   # new preprint
+ruby scripts/paper.rb publish my-paper 10.1137/23M1627729                  # once it is published
+ruby scripts/paper.rb add 10.1103/PhysRevE.105.025311 --image figure.png   # published, no preprint
+ruby scripts/paper.rb cv                                                   # just rebuild and copy the CV
+```
 
-**Ownable CMS** — visual editing in VS Code
+It gets metadata from arXiv and Crossref, matches co-authors to `data/authors/`, adds or updates the
+`\pub{...}` line in the CV (`~/Documents/Employment/CV/scholarly.ltx`, its own local git repository),
+rebuilds the CV with latexmk and copies the PDF into `static/files/`. The Claude Code skill in
+`.claude/skills/add-paper/` runs the script and handles the rest: tags, the CV title in sentence case,
+a preview, and the commit.
 
-1. Install [Ownable CMS](https://marketplace.visualstudio.com/items?itemName=ownable.ownable)
-2. Open your project in VS Code
-3. Click the Ownable icon to start editing visually
+## Customizations
 
-</td>
-</tr>
-</table>
+The look of the old site is rebuilt with these overrides. The template itself is untouched.
 
-![Ownable CMS in Action](https://raw.githubusercontent.com/HugoBlox/kit/main/.github/media/studio/slide-1.webp)
-*Ownable CMS: Drag-and-drop page builder inside VS Code.*
+**Blocks** (`layouts/_partials/hbx/blocks/`), each ported from an old Wowchemy widget:
+- `about`: avatar, name and links on the left; bio, interests and education on the right
+- `collection-2col`: section title in a left column, list on the right
+- `contact-legacy`: contact details with an OpenStreetMap map
+- `course-grid`: course cards with tag filter buttons
+- `people`: students grouped by `user_groups`, with round avatars
+- `tag-cloud`
 
-> [!NOTE]
-> **New to Hugo?** No problem. You don't need to know Hugo — edit visually or write Markdown. Hugo is the engine under the hood that makes your site fast, secure, and free to host. [Learn more →](https://docs.ownable.dev/?utm_source=github&utm_medium=readme&utm_content=docs_academic-cv)
+**List views** (`layouts/_partials/views/`): `compact` and `card-legacy`, the old view 2 and view 3.
 
----
+**Page layouts**:
+- `layouts/publication/list.html`: every publication on one page, with search and type and year filters
+- `layouts/publication/single.html` and `layouts/_partials/pub_line.html`: a full citation line under the title
+- `layouts/post/single.html`: adds the post subtitle
+- `layouts/event/list.html`: talks grouped by year
+- `layouts/authors/term.html`: author pages with the about block and recent items
+- `layouts/_partials/page_links.html`: one PDF button, then Cite and DOI first, as on the old site
 
-## 💎 Go Premium
+**Smaller fixes**:
+- `layouts/_partials/hooks/head-end/fonts.html` loads Google Fonts directly. The template's loader builds a URL that Google rejects. The fonts are set under `fonts:` in `config/_default/params.yaml`.
+- `layouts/_partials/hooks/head-end/legacy-style.html` holds a few CSS tweaks that match the old site.
+- `layouts/_markup/render-passthrough.html` escapes math such as `$0<x<1$` so it isn't parsed as HTML.
+- `layouts/_shortcodes/staticref.html` is the Wowchemy shortcode, kept so old content renders.
+- `config/_default/hugo.yaml` allows `tailwindcss` in `security.exec.allow`, which Hugo 0.163 and later require.
 
-Love the free version? **Academic CV Pro** and **Resume Pro** take it further:
+## Vendored template
 
-- Premium designs that make an unforgettable first impression
-- Advanced timeline and layout options
-- Full-featured course/lecture sections
-- Remove attribution, priority support
+The HugoBlox modules are vendored in `_vendor/` so the site builds even if upstream changes or disappears.
+To upgrade:
 
-| | **Academic CV** (Free) | **Academic CV Pro** |
-| :--- | :---: | :---: |
-| Design | Professional & clean | **Premium designs** |
-| Layouts | Standard sections | **Advanced timelines** |
-| Courses/lectures | Basic | **Full-featured** |
-| Support | Community | **Priority** |
+```bash
+hugo mod get -u && hugo mod vendor
+```
 
-<p align="center">
-  <a href="https://hugoblox.com/pricing?utm_source=github&utm_medium=readme&utm_content=premium_academic-cv"><b>Compare plans</b></a>
-  &nbsp;&nbsp;|&nbsp;&nbsp;
-  <a href="https://hugoblox.com/templates/academic-cv-pro?utm_source=github&utm_medium=readme&utm_content=premium_deploy_academic-cv"><b>Deploy Academic CV Pro</b></a>
-  &nbsp;&nbsp;|&nbsp;&nbsp;
-  <a href="https://hugoblox.com/templates/resume-pro?utm_source=github&utm_medium=readme&utm_content=premium_deploy_resume"><b>Deploy Resume Pro</b></a>
-</p>
+`layouts/post/single.html`, `layouts/publication/single.html` and `layouts/_partials/page_links.html` are
+copies of template files with small changes. After an upgrade, compare them with the new versions in `_vendor/`.
 
----
+## License
 
-## 🏆 Why HugoBlox?
-
-> *Why not just use WordPress, Webflow, or an AI builder like Lovable?*
-
-| | **AI builders** (Lovable, v0) | **CMS platforms** (WordPress, Webflow) | **HugoBlox** |
-| :--- | :---: | :---: | :---: |
-| AI generates your pages | Yes | No | **Yes** |
-| You own the output as readable files | No — React code | No — database | **Yes — Markdown** |
-| Free to host forever | No | No | **Yes** |
-| Human-editable without the tool | Barely | No | **Yes — it's Markdown** |
-| Open source | No | No | **Yes — MIT licensed** |
-
-> [!IMPORTANT]
-> Your content is plain Markdown files. No lock-in, no database, no vendor dependency. If you ever want to leave, take your files and go.
-
----
-
-## FAQ
-
-<details>
-<summary><b>Do I need to know Hugo?</b></summary>
-No. Edit visually with Ownable CMS or write Markdown. Hugo is the build engine — you don't need to touch it.
-</details>
-
-<details>
-<summary><b>Can I import my existing publications?</b></summary>
-Yes. Drop a BibTeX file and publication pages are generated automatically with proper citations, metadata, and links.
-</details>
-
-<details>
-<summary><b>Can I host for free?</b></summary>
-Yes. GitHub Pages, Netlify, Vercel, and Cloudflare Pages all have free tiers for static sites.
-</details>
-
-<details>
-<summary><b>Can I migrate my content later?</b></summary>
-Yes. Your site is just Markdown files in a folder. Copy them anywhere.
-</details>
-
-<details>
-<summary><b>What's Hugo Chat?</b></summary>
-An AI assistant trained on Hugo and HugoBlox docs. Describe what you want and it generates the right pages with correct front matter. <a href="https://hugo.chat/?utm_source=github&utm_medium=readme&utm_content=faq_academic-cv">Free to try.</a>
-</details>
-
-<details>
-<summary><b>Can I cancel Pro anytime?</b></summary>
-Yes. No questions asked.
-</details>
-
----
-
-<h2 align="center">🚀 Ready to launch?</h2>
-
-<p align="center">
-  Deploy in 60 seconds. Customize with AI. Own it as Markdown forever.
-</p>
-
-<p align="center">
-  <a href="https://hugoblox.com/templates/academic-cv?utm_source=github&utm_medium=readme&utm_content=cta_final"><b>Deploy Academic CV — free</b></a>
-  &nbsp;&nbsp;|&nbsp;&nbsp;
-  <a href="https://hugo.chat/?utm_source=github&utm_medium=readme&utm_content=cta_final_academic-cv"><b>Customize with AI</b></a>
-</p>
-
----
-
-## Community & Support
-
-- 💬 [**Discord**](https://discord.gg/z8wNYzb) — ask questions, share your site
-- 📚 [**Docs**](https://docs.ownable.dev/?utm_source=github&utm_medium=readme&utm_content=community_academic-cv)
-- ⭐ [**Star HugoBlox**](https://github.com/HugoBlox/kit) — help others find it
-- 🐦 [**Follow on X**](https://x.com/GoOwnable)
-
-### Sponsors
-
-[**❤️ Sponsor on GitHub**](https://github.com/sponsors/gcushen) | [**🏢 Become a Partner**](https://github.com/sponsors/gcushen)
-
----
-
-Copyright 2016-present [**Lore Labs**](https://lore.tech/?utm_source=github&utm_medium=readme).
-Released under the [MIT License](./LICENSE.md).
-
-<p align="center">
-  <sub>HugoBlox is a trademark of Lore Labs.</sub>
-</p>
-
-<!--START_SECTION:news-->
-<!--Updated at 2026-10-11T02:47:21.574Z-->
-<!--END_SECTION:news-->
+The template code is MIT-licensed by Lore Labs (see `LICENSE.md`). The content (text, papers, images
+and CV) is © Roy Goodman.
