@@ -12,7 +12,7 @@
 # (Crossref metadata and BibTeX), rewriting the CV line in place. `add` and `publish` rebuild
 # the CV and copy its PDF to static/files/ unless --no-cv is given; `cv` does only that.
 #
-# Nothing is committed. The CV lives outside git, so scholarly.ltx is backed up to
+# Nothing is committed. scholarly.ltx is also backed up to
 # scholarly.ltx.bak before each edit. Set CV_DIR to use a different CV folder.
 
 require "json"
@@ -233,10 +233,37 @@ def edit_cv
   puts "Updated #{CV_PAPERS} (backup in scholarly.ltx.bak)"
 end
 
+# The CV's \pub{year}{authors}{title}{venue} macro (packages.tex) adds the \emph, commas and period.
+def pub_line(year, cv_names, title, venue) = "\\pub{#{year}}{#{cv_author_list(cv_names)}}{#{title}}{#{venue}}"
+
+# The four brace groups of a \pub line, or nil.
+def pub_args(line)
+  i = line.index("\\pub{") or return nil
+  i += 4
+  args = []
+  while args.size < 4 && line[i] == "{"
+    depth, j = 0, i
+    loop do
+      depth += 1 if line[j] == "{"
+      depth -= 1 if line[j] == "}"
+      break if depth.zero?
+      j += 1
+      return nil if j >= line.size
+    end
+    args << line[(i + 1)...j]
+    i = j + 1
+  end
+  args.size == 4 ? args : nil
+end
+
+def find_pub(lines, title)
+  lines.index { |l| (a = pub_args(l)) && norm_title(a[2]) == norm_title(title) }
+end
+
 def cv_add_preprint(meta, cv_names)
-  line = "\\paper{#{meta[:date].year}}{#{cv_author_list(cv_names)}, \\emph{#{meta[:title]}}, submitted.}"
+  line = pub_line(meta[:date].year, cv_names, meta[:title], "submitted")
   edit_cv do |text|
-    if text.lines.any? { |l| l.include?("\\paper") && norm_title(l).include?(norm_title(meta[:title])) }
+    if find_pub(text.lines, meta[:title])
       puts "CV already lists this paper; left it alone."
       next text
     end
@@ -246,22 +273,21 @@ def cv_add_preprint(meta, cv_names)
   end
 end
 
-def cv_publish(meta, cv_names)
+def cv_publish(meta, cv_names, page_title = nil)
   # Same shape as the rest of the CV: "Phys. Rev. E \textbf{105}, 025311".
   journal = meta[:short_journal].to_s.empty? ? meta[:journal] : meta[:short_journal]
   journal += " \\textbf{#{meta[:volume]}}" if meta[:volume]
   venue = [journal, meta[:pages]&.tr("–", "-")&.sub("-", "--")].compact.join(", ")
   edit_cv do |text|
     lines = text.lines
-    i = lines.index { |l| l.include?("\\paper") && norm_title(l).include?(norm_title(meta[:title])) }
-    if i
+    if (i = [page_title, meta[:title]].compact.map { find_pub(lines, _1) }.compact.first)
       old = lines[i]
-      title = old[/\\emph\{((?:[^{}]|\{[^{}]*\})*)\}/, 1] || meta[:title]
-      lines[i] = "\\paper{#{meta[:date].year}}{#{cv_author_list(cv_names)}, \\emph{#{title}}, #{venue}.}\n"
+      # Keep the title as written in the CV (it may have been put in sentence case by hand).
+      lines[i] = pub_line(meta[:date].year, cv_names, pub_args(old)[2], venue) + "\n"
       puts "CV line was: #{old.strip}\nCV line now: #{lines[i].strip}"
       lines.join
     else
-      line = "\\paper{#{meta[:date].year}}{#{cv_author_list(cv_names)}, \\emph{#{meta[:title]}}, #{venue}.}"
+      line = pub_line(meta[:date].year, cv_names, meta[:title], venue)
       puts "Could not find the paper in the CV by title, so added it at the top:\n#{line}"
       text.sub(REFEREED_HEADING) { "#{REFEREED_HEADING}\n#{line}" }
     end
@@ -377,7 +403,7 @@ def cmd_publish(slug, doi, opts)
   puts "Updated content/publication/#{slug}/ to the published version"
 
   return if opts[:no_cv]
-  cv_publish(meta, cv_names)
+  cv_publish(meta, cv_names, fm["title"])
   rebuild_cv
 end
 
