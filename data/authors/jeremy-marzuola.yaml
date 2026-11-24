@@ -10,5 +10,7 @@ affiliations:
 - name: University of North Carolina
   url: ''
 links:
+- icon: hero/envelope
+  url: mailto:marzuola@math.unc.edu
 - icon: hero/globe-americas
   url: https://marzuola.web.unc.edu
