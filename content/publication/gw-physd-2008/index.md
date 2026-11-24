@@ -46,7 +46,7 @@ publication:
   pages: "2731–2760"
 links:
   - name: Journal
-    url: http://dx.doi.org/10.1016/j.physd.2008.04.009
+    url: https://doi.org/10.1016/j.physd.2008.04.009
   - name: arXiv
     url: https://arxiv.org/abs/1503.08315
 ---

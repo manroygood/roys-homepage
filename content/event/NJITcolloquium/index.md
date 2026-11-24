@@ -1,7 +1,7 @@
 ---
 title: Transfer entropy for network reconstruction in a simple dynamical model
 event_name: NJIT Applied Mathematics Colloquium
-event_url: https://math.njit.edu/applied-math-colloquium-spring-2020-0
+event_url: https://math.njit.edu/applied-math-colloquium-spring-2020
 location: New Jersey Institute of Technology
 address:
   street: null

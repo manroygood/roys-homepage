@@ -29,7 +29,7 @@ tags:
   - sine-Gordon equation
 links:
   - name: Journal
-    url: http://dx.doi.org/10.1016/j.physd.2004.04.002
+    url: https://doi.org/10.1016/j.physd.2004.04.002
   - name: arXiv
     url: https://arxiv.org/abs/nlin/0310040
 ---

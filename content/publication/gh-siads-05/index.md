@@ -38,7 +38,7 @@ publication:
 url_pdf: ""
 links:
   - name: Journal
-    url: http://www.siam.org/journals/SIADS/4-4/63298.html
+    url: https://doi.org/10.1137/050632981
 ---
 
 

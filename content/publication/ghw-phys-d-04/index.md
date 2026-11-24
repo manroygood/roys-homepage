@@ -38,7 +38,7 @@ tags:
   - Solitary wave collisions
 links:
   - name: Journal
-    url: http://dx.doi.org/10.1016/j.physd.2004.01.021
+    url: https://doi.org/10.1016/j.physd.2004.01.021
   - name: arXiv
     url: https://arxiv.org/abs/nlin/0203057
 ---

@@ -29,7 +29,7 @@ tags:
   - GFD
 links:
   - name: Journal
-    url: http://dx.doi.org/10.1137/S0036139900382978
+    url: https://doi.org/10.1137/S0036139900382978
 ---
 
 

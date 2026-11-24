@@ -28,7 +28,7 @@ publication:
 tags:
   - Solitary wave collisions
   - sine-Gordon equation
-url_pdf: http://dx.doi.org/10.1016/S0167-2789(01)00353-0
+url_pdf: https://doi.org/10.1016/S0167-2789(01)00353-0
 ---
 
 

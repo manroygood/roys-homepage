@@ -28,7 +28,7 @@ publication:
   pages: "83–92"
 links:
   - name: Book
-    url: http://www.ams.org/bookstore?co1=AND&co2=AND&co3=AND&d=BOOK&f=G&fn=105&l=100&op1=AND&op2=AND&op3=AND&p=1&pg1=&pg2=&pg3=ALLF&r=1&s1=&s2=&s3=contemporary%20mathematics%20379&subject=genint&u=
+    url: https://doi.org/10.1090/conm/379/07026
 ---
 
 

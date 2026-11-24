@@ -22,7 +22,7 @@ The [NJIT Applied Math Capstone class](http://cfsm.njit.edu/capstone/index.php) 
 
 I have taught the Capstone class several times. Below  are summaries of the semester-long themes and some of the specific experiments we performed.
 
-* __2005-2006:__ [Dynamical Bias in the Coin Toss](cointoss)
-* __2010:__ [A Mechanical Analogue of the Two-Bounce Resonance](skewball)
-* __2013:__ [Waves in a Chain of Coupled Pendulums](pendulums)
+* __2005-2006:__ [Dynamical Bias in the Coin Toss](cointoss/)
+* __2010:__ [A Mechanical Analogue of the Two-Bounce Resonance](skewball/)
+* __2013:__ [Waves in a Chain of Coupled Pendulums](pendulums/)
 

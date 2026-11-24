@@ -17,7 +17,7 @@ This result formed the culminating experiment of a capstone course in applied ma
 
 **Our experiments:**
 
-* [Experiment 1](../bouncingball/):  Calculating the gravitational acceleration constant from a movie of a bouncing ball.
+* [Experiment 1](/course/capstone/bouncingball/):  Calculating the gravitational acceleration constant from a movie of a bouncing ball.
 * Experiment 2:  Feynman\'s Plate
 * Experiment 3:  The gyroscope with frictional damping (2005)
 * Experiment 4:  Chaos in the Double Pendulum

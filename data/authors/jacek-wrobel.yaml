@@ -14,8 +14,6 @@ affiliations:
 - name: Draper Laboratories
   url: https://www.draper.com
 links:
-- icon: academicons/google-scholar
-  url: https://scholar.google.com/citations?user=PERSON-ID
 - icon: brands/linkedin
   url: https://www.linkedin.com/in/jacek-wróbel-338a08ab
 - icon: hero/book-open

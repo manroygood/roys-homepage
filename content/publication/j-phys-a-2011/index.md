@@ -30,7 +30,7 @@ tags:
   - Nonlinear Schrödinger equation
 links:
   - name: Journal
-    url: http://iopscience.iop.org/1751-8121/44/42/425101
+    url: https://doi.org/10.1088/1751-8113/44/42/425101
   - name: arXiv
     url: https://arxiv.org/abs/1101.5964
 ---

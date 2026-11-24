@@ -29,7 +29,7 @@ publication:
   pages: "1734–1745"
 links:
   - name: Journal
-    url: http://dx.doi.org/10.1016/j.cnsns.2012.10.017
+    url: https://doi.org/10.1016/j.cnsns.2012.10.017
 ---
 
 Part 2 of Jacek Wróbel's dissertation.

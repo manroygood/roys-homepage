@@ -32,5 +32,5 @@ featured: false
 #   Uncomment and edit lines below to show custom links.
 links:
   - name: Web
-    url: "https://sinews.siam.org/Details-Page/siam-new-york-new-jersey-pennsylvania-section-holds-inaugural-conference"
+    url: "https://www.siam.org/publications/siam-news/articles/siam-new-york-new-jersey-pennsylvania-section-holds-inaugural-conference"
 ---

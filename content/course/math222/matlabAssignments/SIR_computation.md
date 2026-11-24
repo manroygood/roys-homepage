@@ -14,7 +14,7 @@ Write your results in a word processor and export the final result into a PDF to
 
 ### Part 1
 
-* This {{% staticref "math222f21/euler2d.html" %}}MATLAB-generated webpage{{% /staticref %}} demonstrates how to use Euler's method to solve a two-component ODE system. Download the {{% staticref "math222f21/euler2d.mlx" %}}live script{{% /staticref %}} and edit the program to solve instead the differential equations satisfied by $S(t)$, $I(t)$, and $R(t)$ in [the SIR supplement](../../supplements/sir_modeling).
+* This {{% staticref "math222f21/euler2d.html" %}}MATLAB-generated webpage{{% /staticref %}} demonstrates how to use Euler's method to solve a two-component ODE system. Download the {{% staticref "math222f21/euler2d.mlx" %}}live script{{% /staticref %}} and edit the program to solve instead the differential equations satisfied by $S(t)$, $I(t)$, and $R(t)$ in [the SIR supplement](/course/math222/supplements/sir_modeling/).
 * Use this MATLAB program to explore the model: play around with initial conditions and parameters and see what happens in the simulations (a more systematic analysis will be performed later). Observe the effect of each parameter and the possible courses of simulated epidemics. Is it possible to simulate a sustained epidemic in this model, i.e., one in which $I(t)$ does not eventually go to zero.
 * Turn in your code, any outputs (graphs) and a few sentences explaining what you notice.
 
