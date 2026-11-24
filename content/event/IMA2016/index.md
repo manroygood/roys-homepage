@@ -1,7 +1,6 @@
 ---
 title: Complex Behavior in Coupled Nonlinear Waveguides
 event_name: Mathematical and Physical Models of Nonlinear Optics
-event_url: https://www.ima.umn.edu/2016-2017/W10.31-11.4.16
 location: Institute for Mathematics and Applications
 address:
   street: University of Minnesota
@@ -30,7 +29,6 @@ image:
 url_slides: 2016IMA.pdf
 url_code: null
 url_pdf: null
-url_video: https://www.ima.umn.edu/2016-2017/W10.31-11.4.16/25544
 slides: ""
 projects: []
 ---

@@ -37,7 +37,7 @@ featured: false
 #   icon_pack: fab
 #   icon: twitter
 
-url_pdf: https://dsweb.siam.org/The-Magazine/Article/four-decades-of-kink-interactions-in-nonlinear-klein-gordon-models-a-crucial-typo-recent-developments-and-the-challenges-ahead
+url_pdf: https://web.archive.org/web/20250123094130/https://dsweb.siam.org/The-Magazine/Article/four-decades-of-kink-interactions-in-nonlinear-klein-gordon-models-a-crucial-typo-recent-developments-and-the-challenges-ahead
 url_code:
 url_dataset:
 url_poster:

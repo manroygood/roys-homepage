@@ -36,7 +36,7 @@ featured: false
 #   icon_pack: fab
 #   icon: twitter
 
-url_pdf: https://dsweb.siam.org/The-Magazine/Article/in-memoriam-richard-haberman
+url_pdf: https://web.archive.org/web/20250420064141/https://dsweb.siam.org/The-Magazine/Article/in-memoriam-richard-haberman
 url_code:
 url_dataset:
 url_poster:

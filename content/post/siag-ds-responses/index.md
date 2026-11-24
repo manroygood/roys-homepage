@@ -58,7 +58,7 @@ I'll arrange these by suitable audience and purpose:
 
 Good for teaching undergraduates
 
-* [Slopes App](https://sites.google.com/a/pepperdine.edu/slopes/) This is a terrific app for iOS and Android devices, written by a group of students and faculty at Pepperdine University led by Timothy Lucas. It is great to use on an iPad during remote lectures and the graphics are stunning compared to pplane and dfield. The Android version is new and not yet full-featured.  I don't think that robust numerical libraries for these devices exist, so they have had to write a lot of the numerical guts of the code themselves. As such, I have managed to break the code on several occasions while trying out exercises and examples I wanted to use. Tim has been very responsive to my inquiries and is aware of the issues.
+* [Slopes App](https://sites.google.com/pepperdine.edu/slopes) This is a terrific app for iOS and Android devices, written by a group of students and faculty at Pepperdine University led by Timothy Lucas. It is great to use on an iPad during remote lectures and the graphics are stunning compared to pplane and dfield. The Android version is new and not yet full-featured.  I don't think that robust numerical libraries for these devices exist, so they have had to write a lot of the numerical guts of the code themselves. As such, I have managed to break the code on several occasions while trying out exercises and examples I wanted to use. Tim has been very responsive to my inquiries and is aware of the issues.
 * [Java implementation of dfield/pplane](https://www.cs.unm.edu/~joel/dfield/) Authorized clone of the original dfield/pplane programs. Requires a Java Runtime Environment. Works fine, bad graphics export.
 * [PyPLANE](https://github.com/m-squared96/PyPLANE) An open-source reimplementation of pplane and dfield written in Python. It appears to be under active development but to run it on Mac or Windows, you need to clone a GitHub repo, so that's too hard for a big undergraduate class. Someday there may be binaries...
 * [JavaScript implementation of dfield and pplane](https://homepages.bluffton.edu/~nesterd/apps/slopefields.html) On the webpage of Darryl Nester of Bluffton University, h/t [Sean Fitzpatrick](https://www.cs.uleth.ca/~fitzpat/)
@@ -74,7 +74,7 @@ Good for teaching undergraduates
 
 ### More Advanced Students and Research
 
-I like these but they don't fit the bill for big intro classes. These are just the ideas people sent me. For a more complete list, look at the [Dynamical Systems Software list](https://dsweb.siam.org/Software) at DSWeb, h/t Andrew Bernoff.
+I like these but they don't fit the bill for big intro classes. These are just the ideas people sent me. For a more complete list, look at the [Dynamical Systems Software list](https://web.archive.org/web/20250618091540/https://dsweb.siam.org/Software) at DSWeb, h/t Andrew Bernoff.
 
 * [matcont](https://sourceforge.net/projects/matcont/) MATLAB package for continuation and bifurcation in discrete and continuous systems. I have used this in my own research and in a graduate class. Highly recommended.
 * [Julia](https://julialang.org) I've been meaning to learn Julia for years! Somehow it always seems easier to stick with MATLAB. In particular, Isaia Nisoli pointed out [this idea](https://discourse.julialang.org/t/plotting-a-phase-portrait-of-a-differential-equation/29208/8).
